@@ -1,0 +1,4 @@
+# C# ignores
+CS/.vs
+CS/CS/bin
+CS/CS/obj
