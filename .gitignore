@@ -2,3 +2,8 @@
 CS/.vs
 CS/CS/bin
 CS/CS/obj
+
+# Ruby ignores
+Ruby/coverage
+Ruby/Gemfile.lock
+Ruby/.rspec
