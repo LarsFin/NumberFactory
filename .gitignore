@@ -3,6 +3,12 @@ CS/.vs
 CS/CS/bin
 CS/CS/obj
 
+# Java ignores
+Java/.gradle
+Java/.idea
+Java/gradle
+Java/gradlew*
+
 # Ruby ignores
 Ruby/coverage
 Ruby/Gemfile.lock
