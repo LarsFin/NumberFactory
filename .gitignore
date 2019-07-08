@@ -8,6 +8,7 @@ Java/.gradle
 Java/.idea
 Java/gradle
 Java/gradlew*
+Java/out
 
 # Ruby ignores
 Ruby/coverage
