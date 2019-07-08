@@ -1,0 +1,14 @@
+{
+  "name": "number-factory",
+  "version": "1.0.0",
+  "description": "Node JS development of TDD Number Factory",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "LarsFin",
+  "license": "ISC"
+}
