@@ -67,4 +67,28 @@ class NumberFactoryTests {
 
     }
 
+    @Nested
+    @DisplayName("Multiplication Tests")
+    class MultiplicationTests {
+
+        @Test
+        @DisplayName("Multiplies two integers")
+        void standardTest() {
+            int expectedResult = 50;
+            assertEquals(expectedResult, numberFactory.multiply(numA, numB));
+        }
+
+        @Test
+        @DisplayName("Random multiplications to test broad range")
+        void variationTest() {
+            Random random = new Random();
+            for (int i = 0; i < 5; i++) {
+                numA = random.nextInt(100) - 50;
+                numB = random.nextInt(100) - 50;
+                assertEquals(numA * numB, numberFactory.multiply(numA, numB));
+            }
+        }
+
+    }
+
 }
