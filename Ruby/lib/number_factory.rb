@@ -20,6 +20,10 @@ class NumberFactory
     int_a * int_b
   end
 
+  def divide(int_a, int_b)
+    int_a.to_f / int_b.to_f
+  end
+
   private
 
   def validate_int(int)
