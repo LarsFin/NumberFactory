@@ -21,7 +21,7 @@ class NumberFactory
   end
 
   def divide(int_a, int_b)
-    int_a.to_f / int_b.to_f
+    int_a.to_f / int_b
   end
 
   private
