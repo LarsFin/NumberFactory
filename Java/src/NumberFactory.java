@@ -24,4 +24,10 @@ class NumberFactory {
 
     }
 
+    int square(int a) {
+
+        return 0;
+
+    }
+
 }

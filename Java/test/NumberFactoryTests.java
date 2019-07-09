@@ -115,4 +115,27 @@ class NumberFactoryTests {
 
     }
 
+    @Nested
+    @DisplayName("Square Tests")
+    class SquareTests {
+
+        @Test
+        @DisplayName("Square Integer")
+        void standardTest() {
+            int expectedResult = 25;
+            assertEquals(expectedResult, numberFactory.square(numA));
+        }
+
+        @Test
+        @DisplayName("Random squares to test broad range")
+        void variationTest() {
+            Random random = new Random();
+            for (int i = 0; i < 5; i++) {
+                numA = random.nextInt(100) - 50;
+                assertEquals(numA * numA, numberFactory.square(numA));
+            }
+        }
+
+    }
+
 }
