@@ -95,6 +95,7 @@ describe NumberFactory do
       expected_num = 5
       double_random = double
       allow(double_random).to receive(:rand).and_return(expected_num)
+      subject = described_class.new(double_random)
       expect(subject.random).to eq(expected_num)
     end
   end

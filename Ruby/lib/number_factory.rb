@@ -44,7 +44,6 @@ class NumberFactory
 
   def random
     @random.rand(101)
-    0
   end
 
   private
