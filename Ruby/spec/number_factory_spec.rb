@@ -57,5 +57,10 @@ describe NumberFactory do
     it 'Should square a passed integer' do
       expect(subject.square(int_a)).to eq(36)
     end
+
+    it 'Should throw an exception when passed argument is not an integer' do
+      expect { subject.square(float) }
+        .to raise_error(RuntimeError, "Non int argument; '1.23' passed")
+    end
   end
 end
