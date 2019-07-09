@@ -2,6 +2,10 @@
 
 # A class for completing simple mathematical functions
 class NumberFactory
+  def initialize(random = Random.new)
+    @random = random
+  end
+
   def add(int_a, int_b)
     validate_int(int_a)
     validate_int(int_b)

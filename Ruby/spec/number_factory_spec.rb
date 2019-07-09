@@ -82,4 +82,13 @@ describe NumberFactory do
                         "Non Array argument; (String) '37911' passed")
     end
   end
+
+  describe '#random' do
+    it 'Should call Random.rand()' do
+      double_random = double
+      subject = described_class.new(double_random)
+      expect(double_random).to receive(:rand)
+      subject.random
+    end
+  end
 end
