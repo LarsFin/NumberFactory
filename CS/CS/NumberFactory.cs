@@ -17,5 +17,10 @@ namespace CS
         {
             return a * b;
         }
+
+        public float Divide(int a, int b)
+        {
+            return 0;
+        }
     }
 }

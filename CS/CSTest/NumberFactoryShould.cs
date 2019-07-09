@@ -81,5 +81,27 @@ namespace CSTest
             int expectedValue = 40;
             _numberFactory.Multiply(_num1, _num2).ShouldBe(expectedValue);
         }
+
+        [Fact]
+        public void BeAbleToDivide()
+        {
+            Random random = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                _num1 = random.Next(-50, 50);
+                _num2 = random.Next(-50, 50);
+                float expectedValue = (float) _num1 / (float) _num2;
+                _numberFactory.Divide(_num1, _num2).ShouldBe(expectedValue);
+            }
+        }
+
+        [Fact]
+        public void BeAbleToDivide2()
+        {
+            _num1 = 5;
+            _num2 = 8;
+            float expectedValue = 0.625f;
+            _numberFactory.Divide(_num1, _num2).ShouldBe(expectedValue);
+        }
     }
 }
