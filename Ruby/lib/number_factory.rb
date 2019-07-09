@@ -26,6 +26,10 @@ class NumberFactory
     int_a.to_f / int_b
   end
 
+  def square(int)
+    int**2
+  end
+
   private
 
   def validate_int(int)
