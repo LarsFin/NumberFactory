@@ -103,5 +103,16 @@ namespace CSTest
             float expectedValue = 0.625f;
             _numberFactory.Divide(_num1, _num2).ShouldBe(expectedValue);
         }
+
+        [Fact]
+        public void BeAbleToSquare()
+        {
+            _num1 = 5;
+            _num2 = 8;
+            int expectedValue = 25;
+            int expectedValue2 = 64;
+            _numberFactory.Square(_num1).ShouldBe(expectedValue);
+            _numberFactory.Square(_num2).ShouldBe(expectedValue2);
+        }
     }
 }

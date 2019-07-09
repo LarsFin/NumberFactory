@@ -22,5 +22,10 @@ namespace CS
         {
             return (float) a / (float) b;
         }
+
+        public int Square(int a)
+        {
+            return 0;
+        }
     }
 }
