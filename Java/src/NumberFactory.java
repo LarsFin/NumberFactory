@@ -30,9 +30,13 @@ class NumberFactory {
 
     }
 
-    int sum(int[] numers) {
+    int sum(int[] numbers) {
 
-        return 0;
+        int sum = 0;
+        for (int n: numbers) {
+            sum += n;
+        }
+        return sum;
 
     }
 
