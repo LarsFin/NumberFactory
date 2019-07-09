@@ -14,7 +14,7 @@ The table below shows the languages currently used.
 |node.JS|Jasmine|npm|NO|
 |PHP|||NO|
 |Python|unittest||NO|
-|Ruby|rspec|rubocop|NO|
+|Ruby|rspec|rubocop<br>simplecov|NO|
 
 ## User Stories of Factory
 
