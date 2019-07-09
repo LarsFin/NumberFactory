@@ -30,7 +30,12 @@ namespace CS
 
         public int Sum(int[] numbers)
         {
-            return 0;
+            int sum = 0;
+            foreach (int n in numbers)
+            {
+                sum += n;
+            }
+            return sum;
         }
     }
 }

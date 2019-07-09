@@ -43,7 +43,7 @@ So I can determine difficult squares,
 I can pass an int argument which is squared and the int result is returned
 ```
 
-Sum [ ]
+Sum [✓]
 
 ```
 As a User,
