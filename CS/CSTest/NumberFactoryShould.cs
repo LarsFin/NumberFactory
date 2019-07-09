@@ -1,4 +1,5 @@
 using CS;
+using Moq;
 using Shouldly;
 using System;
 using Xunit;
@@ -124,6 +125,21 @@ namespace CSTest
             int expectedValue2 = 44;
             _numberFactory.Sum(numbers).ShouldBe(expectedValue);
             _numberFactory.Sum(numbers2).ShouldBe(expectedValue2);
+        }
+
+        [Fact]
+        public void BeAbleToGenRandomNum()
+        {
+            int forcedRandomNum = 5;
+            var mockGenerator = new Mock<IRandomGenerator>();
+            mockGenerator.Setup(generator => generator.Generate()).Returns(forcedRandomNum);
+            _numberFactory = new NumberFactory(mockGenerator.Object);
+
+            // Determining 'random' number generated is returned
+            _numberFactory.GenerateRandomNumber().ShouldBe(forcedRandomNum);
+
+            // Testing to make sure 'random.Next' was called
+            mockGenerator.Verify(generator => generator.Generate(), Times.Once());
         }
     }
 }

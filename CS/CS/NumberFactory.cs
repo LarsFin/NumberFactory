@@ -1,8 +1,33 @@
 ﻿using System;
 namespace CS
 {
+    public interface IRandomGenerator
+    {
+        int Generate();
+    }
+
     public class NumberFactory
     {
+        IRandomGenerator _generator;
+
+        private class RandomGenerator : IRandomGenerator
+        {
+            public int Generate()
+            {
+                return new Random().Next(101);
+            }
+        }
+
+        public NumberFactory()
+        {
+            _generator = new RandomGenerator();
+        }
+
+        public NumberFactory(IRandomGenerator randomGenerator)
+        {
+            _generator = randomGenerator;
+        }
+
         public int Add(int a, int b)
         {
             return a + b;
@@ -36,6 +61,11 @@ namespace CS
                 sum += n;
             }
             return sum;
+        }
+
+        public int GenerateRandomNumber()
+        {
+            return 0;
         }
     }
 }
