@@ -30,4 +30,10 @@ describe NumberFactory do
         .to raise_error(RuntimeError, "Non int argument; '1.23' passed")
     end
   end
+
+  describe '#multiply' do
+    it 'Should multiply the values of two passed integers' do
+      expect(subject.multiply(int_a, int_b)).to eq(30)
+    end
+  end
 end
