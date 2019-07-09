@@ -1,13 +1,14 @@
 # C# ignores
 CS/.vs
-CS/CS/bin
-CS/CS/obj
+CS/*/bin
+CS/*/obj
 
 # Java ignores
 Java/.gradle
 Java/.idea
 Java/gradle
 Java/gradlew*
+Java/out
 
 # Ruby ignores
 Ruby/coverage
