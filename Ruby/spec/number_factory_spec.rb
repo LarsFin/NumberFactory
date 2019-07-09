@@ -24,5 +24,10 @@ describe NumberFactory do
     it 'Should subtract the values of two passed integers' do
       expect(subject.subtract(int_a, int_b)).to eq(1)
     end
+
+    it 'Should throw an exception when ANY arguments passed are not integers' do
+      expect { subject.subtract(int_a, float) }
+        .to raise_error(RuntimeError, "Non int argument; '1.23' passed")
+    end
   end
 end
