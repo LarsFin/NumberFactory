@@ -52,4 +52,10 @@ describe NumberFactory do
         .to raise_error(RuntimeError, "Non int argument; '1.23' passed")
     end
   end
+
+  describe '#square' do
+    it 'Should square a passed integer' do
+      expect(subject.square(int_a)).to eq(36)
+    end
+  end
 end
