@@ -27,5 +27,10 @@ namespace CS
         {
             return a * a;
         }
+
+        public int Sum(int[] numbers)
+        {
+            return 0;
+        }
     }
 }

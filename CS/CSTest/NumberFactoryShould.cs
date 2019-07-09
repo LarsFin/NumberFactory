@@ -114,5 +114,16 @@ namespace CSTest
             _numberFactory.Square(_num1).ShouldBe(expectedValue);
             _numberFactory.Square(_num2).ShouldBe(expectedValue2);
         }
+
+        [Fact]
+        public void BeAbleToSum()
+        {
+            int[] numbers = { 5, 8, 13 };
+            int[] numbers2 = { 2, 6, 12, 24 };
+            int expectedValue = 26;
+            int expectedValue2 = 44;
+            _numberFactory.Sum(numbers).ShouldBe(expectedValue);
+            _numberFactory.Sum(numbers2).ShouldBe(expectedValue2);
+        }
     }
 }
