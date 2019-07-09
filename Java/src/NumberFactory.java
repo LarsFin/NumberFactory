@@ -52,8 +52,7 @@ class NumberFactory {
 
     int random() {
 
-        generator.nextInt(101);
-        return 0;
+        return generator.nextInt(101);
 
     }
 
