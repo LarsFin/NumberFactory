@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../lib/number_factory.rb'
+require_relative '../lib/number_factory'
 
 describe NumberFactory do
   int_a = 6
