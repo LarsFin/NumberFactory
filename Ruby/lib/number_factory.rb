@@ -21,6 +21,8 @@ class NumberFactory
   end
 
   def divide(int_a, int_b)
+    validate_int(int_a)
+    validate_int(int_b)
     int_a.to_f / int_b
   end
 
