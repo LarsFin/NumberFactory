@@ -40,6 +40,7 @@ class NumberFactory
   private
 
   def validate_int(int)
-    raise("Non int argument; '#{int}' passed") unless int.instance_of? Integer
+    raise("Non Integer argument; (#{int.class}) '#{int}' passed") unless
+      int.instance_of? Integer
   end
 end
