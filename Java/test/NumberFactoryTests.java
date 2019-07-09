@@ -138,4 +138,18 @@ class NumberFactoryTests {
 
     }
 
+    @Nested
+    @DisplayName("Sum Tests")
+    class SumTests {
+
+        @Test
+        @DisplayName("Sums Integers")
+        void standardTest() {
+            int expectedResult = 40;
+            int[] numbers = new int[] { 3, 8, 12, 17 };
+            assertEquals(expectedResult, numberFactory.sum(numbers));
+        }
+
+    }
+
 }

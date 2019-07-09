@@ -30,4 +30,10 @@ class NumberFactory {
 
     }
 
+    int sum(int[] numers) {
+
+        return 0;
+
+    }
+
 }
