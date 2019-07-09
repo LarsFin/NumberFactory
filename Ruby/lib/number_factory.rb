@@ -27,6 +27,7 @@ class NumberFactory
   end
 
   def square(int)
+    validate_int(int)
     int**2
   end
 
