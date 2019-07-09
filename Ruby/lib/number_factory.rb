@@ -8,6 +8,10 @@ class NumberFactory
     int_a + int_b
   end
 
+  def subtract(int_a, int_b)
+    int_a - int_b
+  end
+
   private
 
   def validate_int(int)
