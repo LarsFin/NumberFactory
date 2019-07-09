@@ -42,6 +42,11 @@ class NumberFactory
     sum
   end
 
+  def random
+    @random.rand(101)
+    0
+  end
+
   private
 
   def validate_int(int)
