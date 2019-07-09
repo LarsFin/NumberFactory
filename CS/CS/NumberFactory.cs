@@ -65,7 +65,7 @@ namespace CS
 
         public int GenerateRandomNumber()
         {
-            return 0;
+            return _generator.Generate();
         }
     }
 }
