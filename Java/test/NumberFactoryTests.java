@@ -20,33 +20,26 @@ public class NumberFactoryTests {
     @DisplayName("Addition Tests")
     class AdditionTests {
 
-        int num;
-        int num2;
+        int numA;
+        int numB;
 
         @Test
         @DisplayName("5 + 10 should equal 15")
-        void test1() {
-            num = 5;
-            num2 = 10;
-            assertEquals(num + num2, numberFactory.add(num, num2));
-        }
-
-        @Test
-        @DisplayName("-10 + -5 should equal -15")
-        void test2() {
-            num = -10;
-            num2 = -5;
-            assertEquals(num + num2, numberFactory.add(num, num2));
+        void standardTest() {
+            numA = 5;
+            numB = 10;
+            int expectedResult = 15;
+            assertEquals(expectedResult, numberFactory.add(numA, numB));
         }
 
         @Test
         @DisplayName("Random additions to test broad range")
-        void test3() {
+        void variationTest() {
             Random random = new Random();
             for (int i = 0; i < 5; i++) {
-                num = random.nextInt(100) - 50;
-                num2 = random.nextInt(100) - 50;
-                assertEquals(num + num2, numberFactory.add(num, num2));
+                numA = random.nextInt(100) - 50;
+                numB = random.nextInt(100) - 50;
+                assertEquals(numA + numB, numberFactory.add(numA, numB));
             }
         }
 

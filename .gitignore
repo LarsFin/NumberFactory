@@ -1,7 +1,7 @@
 # C# ignores
 CS/.vs
-CS/CS/bin
-CS/CS/obj
+CS/*/bin
+CS/*/obj
 
 # Java ignores
 Java/.gradle
