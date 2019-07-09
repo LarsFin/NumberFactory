@@ -6,6 +6,7 @@ describe NumberFactory do
   int_a = 6
   int_b = 5
   float = 1.23
+  numbers = [3, 7, 9, 11]
 
   subject { described_class.new }
 
@@ -61,6 +62,12 @@ describe NumberFactory do
     it 'Should throw an exception when passed argument is not an integer' do
       expect { subject.square(float) }
         .to raise_error(RuntimeError, "Non int argument; '1.23' passed")
+    end
+  end
+
+  describe '#sum' do
+    it 'Should sum an array of integers' do
+      expect(subject.sum(numbers)).to eq(30)
     end
   end
 end
