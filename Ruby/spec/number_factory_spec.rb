@@ -90,5 +90,12 @@ describe NumberFactory do
       expect(double_random).to receive(:rand)
       subject.random
     end
+
+    it 'Should return rand call value' do
+      expected_num = 5
+      double_random = double
+      allow(double_random).to receive(:rand).and_return(expected_num)
+      expect(subject.random).to eq(expected_num)
+    end
   end
 end
