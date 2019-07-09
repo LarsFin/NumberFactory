@@ -7,27 +7,25 @@ import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class NumberFactoryTests {
+class NumberFactoryTests {
 
-    NumberFactory numberFactory;
+    private NumberFactory numberFactory;
 
     @BeforeEach
     void beforeEach() {
         numberFactory = new NumberFactory();
     }
 
+    private int numA = 5;
+    private int numB = 10;
+
     @Nested
     @DisplayName("Addition Tests")
     class AdditionTests {
 
-        int numA;
-        int numB;
-
         @Test
-        @DisplayName("5 + 10 should equal 15")
+        @DisplayName("Sums two integers")
         void standardTest() {
-            numA = 5;
-            numB = 10;
             int expectedResult = 15;
             assertEquals(expectedResult, numberFactory.add(numA, numB));
         }
@@ -40,6 +38,30 @@ public class NumberFactoryTests {
                 numA = random.nextInt(100) - 50;
                 numB = random.nextInt(100) - 50;
                 assertEquals(numA + numB, numberFactory.add(numA, numB));
+            }
+        }
+
+    }
+
+    @Nested
+    @DisplayName("Subtraction Tests")
+    class SubtractionTests {
+
+        @Test
+        @DisplayName("Subtracts two integers")
+        void standardTest() {
+            int expectedResult = -5;
+            assertEquals(expectedResult, numberFactory.subtract(numA, numB));
+        }
+
+        @Test
+        @DisplayName("Random subtractions to test broad range")
+        void variationTest() {
+            Random random = new Random();
+            for (int i = 0; i < 5; i++) {
+                numA = random.nextInt(100) - 50;
+                numB = random.nextInt(100) - 50;
+                assertEquals(numA - numB, numberFactory.subtract(numA, numB));
             }
         }
 

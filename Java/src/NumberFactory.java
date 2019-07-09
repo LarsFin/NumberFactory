@@ -1,8 +1,14 @@
-public class NumberFactory {
+class NumberFactory {
 
-    public int add(int a, int b) {
+    int add(int a, int b) {
 
         return a + b;
+
+    }
+
+    int subtract(int a, int b) {
+
+        return 0;
 
     }
 

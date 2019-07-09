@@ -3,7 +3,7 @@
 User Stories are below to be completed in Java.
 
 
-add [ ]
+add [✓]
 
 ```
 As a User,
