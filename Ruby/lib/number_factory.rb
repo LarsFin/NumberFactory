@@ -31,6 +31,12 @@ class NumberFactory
     int**2
   end
 
+  def sum(numbers)
+    sum = 0
+    numbers.each { |n| sum += n }
+    sum
+  end
+
   private
 
   def validate_int(int)
