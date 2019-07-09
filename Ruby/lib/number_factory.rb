@@ -32,6 +32,7 @@ class NumberFactory
   end
 
   def sum(numbers)
+    validate_arr(numbers)
     sum = 0
     numbers.each { |n| sum += n }
     sum
@@ -42,5 +43,10 @@ class NumberFactory
   def validate_int(int)
     raise("Non Integer argument; (#{int.class}) '#{int}' passed") unless
       int.instance_of? Integer
+  end
+
+  def validate_arr(arr)
+    raise("Non Array argument; (#{arr.class}) '#{arr}' passed") unless
+      arr.instance_of? Array
   end
 end
