@@ -8,7 +8,7 @@ The table below shows the languages currently used.
 
 |Language|Tested With|Additional Tools|Complete?|
 |:-:|:-:|:-:|:-:|
-|C#|xUnit|Moq<br>Shouldly|NO|
+|C#|xUnit|Moq<br>Shouldly|YES|
 |go|||NO|
 |Java|Junit|Mockito<br>gradle|NO|
 |node.JS|Jasmine|npm|NO|
