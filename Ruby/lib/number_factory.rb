@@ -9,6 +9,8 @@ class NumberFactory
   end
 
   def subtract(int_a, int_b)
+    validate_int(int_a)
+    validate_int(int_b)
     int_a - int_b
   end
 
