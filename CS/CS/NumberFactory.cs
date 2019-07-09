@@ -7,5 +7,10 @@ namespace CS
         {
             return a + b;
         }
+
+        public int Subtract(int a, int b)
+        {
+            return 0;
+        }
     }
 }

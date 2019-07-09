@@ -37,5 +37,27 @@ namespace CSTest
             int expectedValue = 13;
             _numberFactory.Add(_num1, _num2).ShouldBe(expectedValue);
         }
+
+        [Fact]
+        public void BeAbleToSubtract()
+        {
+            Random random = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                _num1 = random.Next(-50, 50);
+                _num2 = random.Next(-50, 50);
+                int expectedValue = _num1 - _num2;
+                _numberFactory.Subtract(_num1, _num2).ShouldBe(expectedValue);
+            }
+        }
+
+        [Fact]
+        public void BeAbleToSubtract2()
+        {
+            _num1 = 5;
+            _num2 = 8;
+            int expectedValue = -3;
+            _numberFactory.Subtract(_num1, _num2).ShouldBe(expectedValue);
+        }
     }
 }
