@@ -91,4 +91,28 @@ class NumberFactoryTests {
 
     }
 
+    @Nested
+    @DisplayName("Division Tests")
+    class DivisionTests {
+
+        @Test
+        @DisplayName("Divides two Integers")
+        void standardTest() {
+            float expectedResult = 0.5f;
+            assertEquals(expectedResult, numberFactory.divide(numA, numB));
+        }
+
+        @Test
+        @DisplayName("Random divisions to test broad range")
+        void variationTest() {
+            Random random = new Random();
+            for (int i = 0; i < 5; i++) {
+                numA = random.nextInt(100) - 50;
+                numB = random.nextInt(100) - 50;
+                assertEquals((float) numA / (float) numB, numberFactory.divide(numA, numB));
+            }
+        }
+
+    }
+
 }

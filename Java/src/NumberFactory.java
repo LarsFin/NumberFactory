@@ -18,4 +18,10 @@ class NumberFactory {
 
     }
 
+    float divide(int a, int b) {
+
+        return 0;
+
+    }
+
 }
