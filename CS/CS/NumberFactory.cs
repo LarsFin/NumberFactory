@@ -3,8 +3,9 @@ namespace CS
 {
     public class NumberFactory
     {
-        public NumberFactory()
+        public int Add(int a, int b)
         {
+            return 0;
         }
     }
 }
