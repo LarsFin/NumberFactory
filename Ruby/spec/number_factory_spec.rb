@@ -19,4 +19,10 @@ describe NumberFactory do
         .to raise_error(RuntimeError, "Non int argument; '1.23' passed")
     end
   end
+
+  describe '#subtract' do
+    it 'Should subtract the values of two passed integers' do
+      expect(subject.subtract(int_a, int_b)).to eq(1)
+    end
+  end
 end
