@@ -41,4 +41,10 @@ describe NumberFactory do
         .to raise_error(RuntimeError, "Non int argument; '1.23' passed")
     end
   end
+
+  describe '#divide' do
+    it 'Should dived the values of two passed integers' do
+      expect(subject.divide(int_a, int_b)).to eq(1.2)
+    end
+  end
 end
