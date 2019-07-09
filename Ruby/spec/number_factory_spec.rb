@@ -5,12 +5,18 @@ require_relative '../lib/number_factory.rb'
 describe NumberFactory do
   int_a = 6
   int_b = 5
+  float = 1.23
 
   subject { described_class.new }
 
   describe '#add' do
     it 'Should sum the values of two passed integers' do
       expect(subject.add(int_a, int_b)).to eq(11)
+    end
+
+    it 'Should throw an exception when ANY arguments passed are not integers' do
+      expect { subject.add(int_a, float) }
+        .to raise_error(RuntimeError, "Non int argument; '1.23' passed")
     end
   end
 end
