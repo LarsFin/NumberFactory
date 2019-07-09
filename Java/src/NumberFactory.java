@@ -1,4 +1,14 @@
+import java.util.Random;
+
 class NumberFactory {
+
+    private Random generator;
+
+    NumberFactory() { }
+
+    NumberFactory(Random random) {
+        generator = random;
+    }
 
     int add(int a, int b) {
 
@@ -37,6 +47,12 @@ class NumberFactory {
             sum += n;
         }
         return sum;
+
+    }
+
+    int random() {
+
+        return 0;
 
     }
 

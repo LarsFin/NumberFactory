@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.*;
 
 class NumberFactoryTests {
 
@@ -148,6 +149,21 @@ class NumberFactoryTests {
             int expectedResult = 40;
             int[] numbers = new int[] { 3, 8, 12, 17 };
             assertEquals(expectedResult, numberFactory.sum(numbers));
+        }
+
+    }
+
+    @Nested
+    @DisplayName("Random Tests")
+    class RandomTests {
+
+        @Test
+        @DisplayName("Calls random generation")
+        void callsRandomGeneration() {
+            Random random = mock(Random.class);
+            numberFactory = new NumberFactory(random);
+            numberFactory.random();
+            verify(random).nextInt(101);
         }
 
     }
