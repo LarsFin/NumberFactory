@@ -157,13 +157,27 @@ class NumberFactoryTests {
     @DisplayName("Random Tests")
     class RandomTests {
 
+        Random random;
+        int expectedGen = 50;
+
+        @BeforeEach
+        void beforeEach() {
+            random = mock(Random.class);
+            when(random.nextInt(101)).thenReturn(expectedGen);
+            numberFactory = new NumberFactory(random);
+        }
+
         @Test
         @DisplayName("Calls random generation")
         void callsRandomGeneration() {
-            Random random = mock(Random.class);
-            numberFactory = new NumberFactory(random);
             numberFactory.random();
             verify(random).nextInt(101);
+        }
+
+        @Test
+        @DisplayName("Returns random number")
+        void returnsGeneratedNumber() {
+            assertEquals(expectedGen, numberFactory.random());
         }
 
     }
