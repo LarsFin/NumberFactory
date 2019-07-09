@@ -27,7 +27,7 @@ So I can determine difficult multiplication,
 I can pass two arguments which are multiplied and int result is returned
 ```
 
-Divide [ ]
+Divide [✓]
 
 ```
 As a User,

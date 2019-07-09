@@ -20,7 +20,7 @@ namespace CS
 
         public float Divide(int a, int b)
         {
-            return 0;
+            return (float) a / (float) b;
         }
     }
 }
