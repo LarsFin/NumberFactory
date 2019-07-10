@@ -1,7 +1,7 @@
 import sys
 import unittest
 
-from number_factory.number_factory import NumberFactory
+from number_factory.number_factory import *
 
 
 INT_A = 10
@@ -19,6 +19,9 @@ class NumberFactoryTest(unittest.TestCase):
         fail_message = "Expected {expected}, got {actual}.".format(
             expected=expected_result, actual=actual_result)
         self.assertEqual(actual_result, expected_result, fail_message)
+
+    def test_add_arguments(self):
+        self.assertRaises(ArgumentException, self.number_factory.add, 2.4, 8.9)
 
     def test_subtract(self):
         expected_result = 4
