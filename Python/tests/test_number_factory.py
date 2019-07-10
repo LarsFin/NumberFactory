@@ -63,6 +63,10 @@ class NumberFactoryTest(unittest.TestCase):
             expected=expected_result, actual=actual_result)
         self.assertEqual(actual_result, expected_result, fail_message)
 
+    def test_square_argument(self):
+        self.assertRaises(ArgumentException, self.number_factory.square,
+                          9.9)
+
 
 if __name__ == "__main__":
     unittest.main()
