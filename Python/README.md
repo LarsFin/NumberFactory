@@ -15,7 +15,19 @@ export PYTHONPATH=$PWD
 pyrg tests/test_number_factory.py
 ```
 
-add [ ]
+*Install `pycodestyle`;*
+
+```
+pip install pycodestyle
+```
+
+Alternatively run after installing `pycodestyle`;
+
+```
+./test-and-analyse.sh
+```
+
+add [✓]
 
 ```
 As a User,

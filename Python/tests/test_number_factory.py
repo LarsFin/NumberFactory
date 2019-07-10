@@ -18,7 +18,7 @@ class NumberFactoryTest(unittest.TestCase):
         actual_result = self.number_factory.add(INT_A, INT_B)
         fail_message = "Expected {expected}, got {actual}.".format(
             expected=expected_result, actual=actual_result)
-        self.assertEqual(actual_result, expected_answer)
+        self.assertEqual(actual_result, expected_result)
 
 
 if __name__ == "__main__":
