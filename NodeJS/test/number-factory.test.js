@@ -86,4 +86,14 @@ describe("divide tests", () => {
 
     });
 
+    test("Test divide arguments", () => {
+
+        expect(() => {
+
+            numberFactory.divide(intA, float);
+
+        }).toThrow(ArgumentError);
+
+    });
+
 });
