@@ -89,6 +89,15 @@ class NumberFactoryTest(unittest.TestCase):
         self.number_factory.random()
         staged_random.randint.assert_called_with(0, 101)
 
+    def test_random_return(self):
+        staged_random = Random()
+        expected_result = 50
+        staged_random.randint = MagicMock(return_value=expected_result)
+        actual_result = self.number_factory.random()
+        fail_message = "Expected {expected}, got {actual}.".format(
+            expected=expected_result, actual=actual_result)
+        self.assertEqual(actual_result, expected_result, fail_message)
+
 
 if __name__ == "__main__":
     unittest.main()
