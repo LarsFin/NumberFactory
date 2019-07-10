@@ -40,6 +40,7 @@ class NumberFactory {
 
     square (intA) {
 
+        this._validateInt(intA);
         const powerFactor = 2;
 
         return intA ** powerFactor;
