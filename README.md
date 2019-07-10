@@ -11,7 +11,7 @@ The table below shows the languages currently used.
 |C#|xUnit|Moq<br>Shouldly|NO|
 |go|||NO|
 |Java|Junit|Mockito<br>gradle|NO|
-|node.JS|Jasmine|npm|NO|
+|node.JS|Jest|npm<br>eslint|NO|
 |PHP|||NO|
 |Python|unittest||NO|
 |Ruby|rspec|rubocop|NO|
