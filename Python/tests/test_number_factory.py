@@ -1,6 +1,7 @@
 import sys
 import unittest
 
+from mock import MagicMock
 from number_factory.number_factory import *
 
 
@@ -80,6 +81,12 @@ class NumberFactoryTest(unittest.TestCase):
     def test_sum_argument(self):
         self.assertRaises(ArgumentException, self.number_factory.sum,
                           MIX_ARR)
+
+    def test_random_called(self):
+        staged_random = Random()
+        staged_random.randint = MagicMock()
+        self.number_factory = NumberFactory(staged_random)
+        staged_random.randint.assert_called_with(0, 101)
 
 
 if __name__ == "__main__":

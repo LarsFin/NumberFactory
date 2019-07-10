@@ -1,5 +1,7 @@
 import sys
 
+from random import Random
+
 
 class NumberFactory:
     def add(self, int_a, int_b):
