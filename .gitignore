@@ -10,6 +10,9 @@ Java/gradle
 Java/gradlew*
 Java/out
 
+# Python ignores
+Python/*/*.pyc
+
 # Ruby ignores
 Ruby/coverage
 Ruby/Gemfile.lock
