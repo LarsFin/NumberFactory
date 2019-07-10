@@ -22,6 +22,9 @@ class NumberFactory {
 
     multiply (intA, intB) {
 
+        this._validateInt(intA);
+        this._validateInt(intB);
+
         return intA * intB;
 
     }
