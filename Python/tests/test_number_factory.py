@@ -52,6 +52,10 @@ class NumberFactoryTest(unittest.TestCase):
             expected=expected_result, actual=actual_result)
         self.assertEqual(actual_result, expected_result, fail_message)
 
+    def test_divide_arguments(self):
+        self.assertRaises(ArgumentException, self.number_factory.divide,
+                          4, 2.2)
+
 
 if __name__ == "__main__":
     unittest.main()
