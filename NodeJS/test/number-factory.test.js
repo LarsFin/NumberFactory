@@ -3,14 +3,13 @@ const NF = require("../lib/number-factory");
 describe("Number Factory tests", () => {
 
     const intA = 12,
-        intB = 10,
-        numberFactory = new NF();
+        intB = 10;
 
     describe("addition tests", () => {
 
         test("Test add return", () => {
 
-            const actual = numberFactory.addition(intA, intB),
+            const actual = NF.addition(intA, intB),
                 expected = 22;
 
             expect(actual).toBe(expected);
