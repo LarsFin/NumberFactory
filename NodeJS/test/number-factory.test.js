@@ -74,3 +74,16 @@ describe("multiply tests", () => {
     });
 
 });
+
+describe("divide tests", () => {
+
+    test("Test divide return", () => {
+
+        const actual = numberFactory.divide(intA, intB),
+            expected = 1.2;
+
+        expect(actual).toBe(expected);
+
+    });
+
+});
