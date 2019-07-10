@@ -30,6 +30,10 @@ class NumberFactoryTest(unittest.TestCase):
             expected=expected_result, actual=actual_result)
         self.assertEqual(actual_result, expected_result, fail_message)
 
+    def test_subtract_arguments(self):
+        self.assertRaises(ArgumentException, self.number_factory.subtract,
+                          6.4, 0.9)
+
 
 if __name__ == "__main__":
     unittest.main()
