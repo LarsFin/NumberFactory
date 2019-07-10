@@ -40,7 +40,7 @@ class NumberFactory:
         return sum
 
     def random(self):
-        self.generator.randint(0, 101)
+        return self.generator.randint(0, 101)
 
     def _validate_int(self, arg):
         if not isinstance(arg, int):
