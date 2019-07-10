@@ -112,6 +112,19 @@ describe("divide tests", () => {
 
 });
 
+describe("square tests", () => {
+
+    test("Test square return", () => {
+
+        const actual = numberFactory.square(intA),
+            expected = 144;
+
+        expect(actual).toBe(expected);
+
+    });
+
+});
+
 describe("sum tests", () => {
 
     test("Test sum return", () => {
