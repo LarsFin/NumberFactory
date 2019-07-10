@@ -123,6 +123,16 @@ describe("square tests", () => {
 
     });
 
+    test("Test square argument", () => {
+
+        expect(() => {
+
+            numberFactory.square(float);
+
+        }).toThrow(ArgumentError);
+
+    });
+
 });
 
 describe("sum tests", () => {
