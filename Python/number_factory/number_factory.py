@@ -23,6 +23,7 @@ class NumberFactory:
         return float(int_a) / int_b
 
     def square(self, int):
+        self._validate_int(int)
         return int ** 2
 
     def _validate_int(self, arg):
