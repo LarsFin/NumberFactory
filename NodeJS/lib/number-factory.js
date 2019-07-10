@@ -31,6 +31,9 @@ class NumberFactory {
 
     divide (intA, intB) {
 
+        this._validateInt(intA);
+        this._validateInt(intB);
+
         return intA / intB;
 
     }
