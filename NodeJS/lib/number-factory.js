@@ -38,6 +38,14 @@ class NumberFactory {
 
     }
 
+    square (intA) {
+
+        const powerFactor = 2;
+
+        return intA ** powerFactor;
+
+    }
+
     sum (integers) {
 
         let sum = 0;
