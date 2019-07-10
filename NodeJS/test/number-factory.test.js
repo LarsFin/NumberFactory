@@ -12,6 +12,12 @@ const float = 3.5,
         intC,
         intD
     ],
+    mixedArr = [
+        intA,
+        intB,
+        float,
+        intD
+    ],
     numberFactory = new NF();
 
 describe("addition tests", () => {
@@ -114,6 +120,16 @@ describe("sum tests", () => {
             expected = 100;
 
         expect(actual).toBe(expected);
+
+    });
+
+    test("Test sum argument", () => {
+
+        expect(() => {
+
+            numberFactory.sum(mixedArr);
+
+        }).toThrow(ArgumentError);
 
     });
 
