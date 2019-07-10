@@ -63,4 +63,14 @@ describe("multiply tests", () => {
 
     });
 
+    test("Test multiply arguments", () => {
+
+        expect(() => {
+
+            numberFactory.multiply(intA, float);
+
+        }).toThrow(ArgumentError);
+
+    });
+
 });
