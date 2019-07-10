@@ -38,6 +38,20 @@ class NumberFactory {
 
     }
 
+    sum (integers) {
+
+        let sum = 0;
+
+        integers.forEach((num) => {
+
+            sum += num;
+
+        });
+
+        return sum;
+
+    }
+
     _validateInt (arg) {
 
         const bottom = 0,
