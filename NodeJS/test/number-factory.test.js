@@ -165,10 +165,10 @@ describe("random tests", () => {
 
     test("Test Math.random() called", () => {
 
-        const expected = 2;
+        const expected = 1;
 
         diNumberFactory.random();
-        expect(mockRandomCall.mock.calls.length).toHaveLength(expected);
+        expect(mockRandomCall.mock.calls).toHaveLength(expected);
 
     });
 

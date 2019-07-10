@@ -2,6 +2,12 @@ const ArgumentError = require("./argument-error.js");
 
 class NumberFactory {
 
+    constructor (rfunc = Math.random) {
+
+        this.rfunc = rfunc;
+
+    }
+
     addition (intA, intB) {
 
         this._validateInt(intA);
@@ -59,6 +65,12 @@ class NumberFactory {
         });
 
         return sum;
+
+    }
+
+    random () {
+
+        this.rfunc();
 
     }
 
