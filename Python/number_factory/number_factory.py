@@ -30,6 +30,7 @@ class NumberFactory:
         # Could use sum() but for sake of building...
         sum = 0
         for n in arr:
+            self._validate_int(n)
             sum += n
         return sum
 
