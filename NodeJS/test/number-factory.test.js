@@ -4,6 +4,14 @@ const ArgumentError = require("../lib/argument-error.js");
 const float = 3.5,
     intA = 12,
     intB = 10,
+    intC = 33,
+    intD = 45,
+    integers = [
+        intA,
+        intB,
+        intC,
+        intD
+    ],
     numberFactory = new NF();
 
 describe("addition tests", () => {
@@ -93,6 +101,19 @@ describe("divide tests", () => {
             numberFactory.divide(intA, float);
 
         }).toThrow(ArgumentError);
+
+    });
+
+});
+
+describe("sum tests", () => {
+
+    test("Test sum return", () => {
+
+        const actual = numberFactory.sum(integers),
+            expected = 100;
+
+        expect(actual).toBe(expected);
 
     });
 
