@@ -160,7 +160,8 @@ describe("sum tests", () => {
 
 describe("random tests", () => {
 
-    const mockRandomCall = jest.fn(),
+    const force = 0.999,
+        mockRandomCall = jest.fn(() => force),
         diNumberFactory = new NF(mockRandomCall);
 
     test("Test Math.random() called", () => {
@@ -169,6 +170,14 @@ describe("random tests", () => {
 
         diNumberFactory.random();
         expect(mockRandomCall.mock.calls).toHaveLength(expected);
+
+    });
+
+    test("Test random return", () => {
+
+        const expected = 100;
+
+        expect(diNumberFactory.random()).toBe(expected);
 
     });
 
