@@ -11,6 +11,12 @@ class NumberFactory {
 
     }
 
+    subtract (intA, intB) {
+
+        return intA - intB;
+
+    }
+
     _validateInt (arg) {
 
         const bottom = 0,
