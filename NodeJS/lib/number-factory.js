@@ -70,7 +70,9 @@ class NumberFactory {
 
     random () {
 
-        this.rfunc();
+        const cap = 101;
+
+        return Math.floor(this.rfunc() * cap);
 
     }
 
