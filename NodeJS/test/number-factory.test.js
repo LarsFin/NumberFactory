@@ -1,8 +1,10 @@
 const NF = require("../lib/number-factory");
+const ArgumentError = require("../lib/argument-error.js");
 
 describe("Number Factory tests", () => {
 
-    const intA = 12,
+    const float = 3.5,
+        intA = 12,
         intB = 10;
 
     describe("addition tests", () => {
@@ -13,6 +15,16 @@ describe("Number Factory tests", () => {
                 expected = 22;
 
             expect(actual).toBe(expected);
+
+        });
+
+        test("Test add arguments", () => {
+
+            expect(() => {
+
+                NF.addition(intA, float);
+
+            }).toThrow(ArgumentError);
 
         });
 
