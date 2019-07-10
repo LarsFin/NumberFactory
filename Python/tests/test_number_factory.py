@@ -86,6 +86,7 @@ class NumberFactoryTest(unittest.TestCase):
         staged_random = Random()
         staged_random.randint = MagicMock()
         self.number_factory = NumberFactory(staged_random)
+        self.number_factory.random()
         staged_random.randint.assert_called_with(0, 101)
 
 
