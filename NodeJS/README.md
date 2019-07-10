@@ -27,7 +27,7 @@ So I can determine difficult multiplication,
 I can pass two arguments which are multiplied and int result is returned
 ```
 
-divide [ ]
+divide [✓]
 
 ```
 As a User,
@@ -43,7 +43,7 @@ So I can determine difficult squares,
 I can pass an int argument which is squared and the int result is returned
 ```
 
-sum [ ]
+sum [✓]
 
 ```
 As a User,

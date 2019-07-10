@@ -44,6 +44,7 @@ class NumberFactory {
 
         integers.forEach((num) => {
 
+            this._validateInt(num);
             sum += num;
 
         });
