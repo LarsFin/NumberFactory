@@ -2,6 +2,18 @@
 
 User Stories are below to be completed in Python.
 
+Install helpful colour formatter for testing output;
+
+```
+pip install pyrg
+```
+
+Run tests (from this dir)
+
+```
+export PYTHONPATH=$PWD
+pyrg tests/test_number_factory.py
+```
 
 add [ ]
 
