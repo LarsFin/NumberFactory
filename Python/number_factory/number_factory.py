@@ -4,6 +4,9 @@ from random import Random
 
 
 class NumberFactory:
+    def __init__(self, generator=Random()):
+        self.generator = generator
+
     def add(self, int_a, int_b):
         self._validate_int(int_a)
         self._validate_int(int_b)
@@ -35,6 +38,9 @@ class NumberFactory:
             self._validate_int(n)
             sum += n
         return sum
+
+    def random(self):
+        self.generator.randint(0, 101)
 
     def _validate_int(self, arg):
         if not isinstance(arg, int):
