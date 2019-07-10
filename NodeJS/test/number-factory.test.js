@@ -51,3 +51,16 @@ describe("subtract tests", () => {
     });
 
 });
+
+describe("multiply tests", () => {
+
+    test("Test multiply return", () => {
+
+        const actual = numberFactory.multiply(intA, intB),
+            expected = 120;
+
+        expect(actual).toBe(expected);
+
+    });
+
+});
