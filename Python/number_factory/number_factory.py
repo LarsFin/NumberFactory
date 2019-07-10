@@ -26,6 +26,13 @@ class NumberFactory:
         self._validate_int(int)
         return int ** 2
 
+    def sum(self, arr):
+        # Could use sum() but for sake of building...
+        sum = 0
+        for n in arr:
+            sum += n
+        return sum
+
     def _validate_int(self, arg):
         if not isinstance(arg, int):
             raise ArgumentException("Argument: {} is not an int".format(int))
