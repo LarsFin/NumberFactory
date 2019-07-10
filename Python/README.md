@@ -8,6 +8,12 @@ Install helpful colour formatter for testing output;
 pip install pyrg
 ```
 
+Install mock;
+
+```
+pip install mock
+```
+
 Run tests (from this dir)
 
 ```
@@ -59,7 +65,7 @@ So I can determine difficult division,
 I can pass two arguments which are divided and float result is returned
 ```
 
-square [ ]
+square [✓]
 
 ```
 As a User,
@@ -67,7 +73,7 @@ So I can determine difficult squares,
 I can pass an int argument which is squared and the int result is returned
 ```
 
-sum [ ]
+sum [✓]
 
 ```
 As a User,
@@ -75,7 +81,7 @@ So I can sum multiple integers,
 I can pass an array of integers which is summed and the int result is returned
 ```
 
-random [ ]
+random [✓]
 
 ```
 As a User,
