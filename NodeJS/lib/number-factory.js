@@ -20,6 +20,12 @@ class NumberFactory {
 
     }
 
+    multiply (intA, intB) {
+
+        return intA * intB;
+
+    }
+
     _validateInt (arg) {
 
         const bottom = 0,
