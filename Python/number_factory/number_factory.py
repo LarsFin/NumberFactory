@@ -13,6 +13,8 @@ class NumberFactory:
         return int_a - int_b
 
     def multiply(self, int_a, int_b):
+        self._validate_int(int_a)
+        self._validate_int(int_b)
         return int_a * int_b
 
     def _validate_int(self, arg):
