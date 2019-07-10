@@ -35,7 +35,7 @@ So I can determine difficult addition,
 I can pass two arguments which are added and int result is returned
 ```
 
-subtract [ ]
+subtract [✓]
 
 ```
 As a User,

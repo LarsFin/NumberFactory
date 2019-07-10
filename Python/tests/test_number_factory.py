@@ -34,6 +34,13 @@ class NumberFactoryTest(unittest.TestCase):
         self.assertRaises(ArgumentException, self.number_factory.subtract,
                           6.4, 0.9)
 
+    def test_multiply(self):
+        expected_result = 60
+        actual_result = self.number_factory.multiply(INT_A, INT_B)
+        fail_message = "Expected {expected}, got {actual}.".format(
+            expected=expected_result, actual=actual_result)
+        self.assertEqual(actual_result, expected_result, fail_message)
+
 
 if __name__ == "__main__":
     unittest.main()
