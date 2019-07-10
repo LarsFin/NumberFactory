@@ -31,4 +31,17 @@ describe("Number Factory tests", () => {
 
     });
 
+    describe("subtract tests", () => {
+
+        test("Test subtract return", () => {
+
+            const actual = numberFactory.subtract(intA, intB),
+                expected = 2;
+
+            expect(actual).toBe(expected);
+
+        });
+
+    });
+
 });
