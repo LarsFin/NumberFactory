@@ -1,46 +1,52 @@
 const NF = require("../lib/number-factory");
 const ArgumentError = require("../lib/argument-error.js");
 
-describe("Number Factory tests", () => {
+const float = 3.5,
+    intA = 12,
+    intB = 10,
+    numberFactory = new NF();
 
-    const float = 3.5,
-        intA = 12,
-        intB = 10,
-        numberFactory = new NF();
+describe("addition tests", () => {
 
-    describe("addition tests", () => {
+    test("Test addition return", () => {
 
-        test("Test addition return", () => {
+        const actual = numberFactory.addition(intA, intB),
+            expected = 22;
 
-            const actual = numberFactory.addition(intA, intB),
-                expected = 22;
-
-            expect(actual).toBe(expected);
-
-        });
-
-        test("Test addition arguments", () => {
-
-            expect(() => {
-
-                numberFactory.addition(intA, float);
-
-            }).toThrow(ArgumentError);
-
-        });
+        expect(actual).toBe(expected);
 
     });
 
-    describe("subtract tests", () => {
+    test("Test addition arguments", () => {
 
-        test("Test subtract return", () => {
+        expect(() => {
 
-            const actual = numberFactory.subtract(intA, intB),
-                expected = 2;
+            numberFactory.addition(intA, float);
 
-            expect(actual).toBe(expected);
+        }).toThrow(ArgumentError);
 
-        });
+    });
+
+});
+
+describe("subtract tests", () => {
+
+    test("Test subtract return", () => {
+
+        const actual = numberFactory.subtract(intA, intB),
+            expected = 2;
+
+        expect(actual).toBe(expected);
+
+    });
+
+    test("Test subtract arguments", () => {
+
+        expect(() => {
+
+            numberFactory.subtract(intA, float);
+
+        }).toThrow(ArgumentError);
 
     });
 
