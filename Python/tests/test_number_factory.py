@@ -6,6 +6,8 @@ from number_factory.number_factory import *
 
 INT_A = 6
 INT_B = 10
+FLOAT = 2.8
+INTEGERS = [5, 8, 11, 14, 22]
 
 
 class NumberFactoryTest(unittest.TestCase):
@@ -21,7 +23,8 @@ class NumberFactoryTest(unittest.TestCase):
         self.assertEqual(actual_result, expected_result, fail_message)
 
     def test_add_arguments(self):
-        self.assertRaises(ArgumentException, self.number_factory.add, 2.4, 8.9)
+        self.assertRaises(ArgumentException, self.number_factory.add,
+                          INT_A, FLOAT)
 
     def test_subtract(self):
         expected_result = -4
@@ -32,7 +35,7 @@ class NumberFactoryTest(unittest.TestCase):
 
     def test_subtract_arguments(self):
         self.assertRaises(ArgumentException, self.number_factory.subtract,
-                          6.4, 0.9)
+                          INT_A, FLOAT)
 
     def test_multiply(self):
         expected_result = 60
@@ -43,7 +46,7 @@ class NumberFactoryTest(unittest.TestCase):
 
     def test_multiply_arguments(self):
         self.assertRaises(ArgumentException, self.number_factory.multiply,
-                          8.9, 2.2)
+                          INT_A, FLOAT)
 
     def test_divide(self):
         expected_result = 0.6
@@ -54,7 +57,7 @@ class NumberFactoryTest(unittest.TestCase):
 
     def test_divide_arguments(self):
         self.assertRaises(ArgumentException, self.number_factory.divide,
-                          4, 2.2)
+                          INT_A, FLOAT)
 
     def test_square(self):
         expected_result = 36
@@ -64,8 +67,14 @@ class NumberFactoryTest(unittest.TestCase):
         self.assertEqual(actual_result, expected_result, fail_message)
 
     def test_square_argument(self):
-        self.assertRaises(ArgumentException, self.number_factory.square,
-                          9.9)
+        self.assertRaises(ArgumentException, self.number_factory.square, FLOAT)
+
+    def test_sum(self):
+        expected_result = 60
+        actual_result = self.number_factory.sum(INTEGERS)
+        fail_message = "Expected {expected}, got {actual}.".format(
+            expected=expected_result, actual=actual_result)
+        self.assertEqual(actual_result, expected_result, fail_message)
 
 
 if __name__ == "__main__":
