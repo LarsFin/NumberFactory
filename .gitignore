@@ -10,6 +10,11 @@ Java/gradle
 Java/gradlew*
 Java/out
 
+# NodeJS ignores
+NodeJS/coverage
+NodeJS/node_modules
+NodeJS/package-lock.json
+
 # Python ignores
 Python/*/*.pyc
 
