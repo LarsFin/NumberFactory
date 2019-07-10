@@ -20,6 +20,13 @@ class NumberFactoryTest(unittest.TestCase):
             expected=expected_result, actual=actual_result)
         self.assertEqual(actual_result, expected_result)
 
+    def test_subtract(self):
+        expected_result = 4
+        actual_result = self.number_factory.subtract(INT_A, INT_B)
+        fail_message = "Expected {expected}, got {actual}.".format(
+            expected=expected_result, actual=actual_result)
+        self.assertEqual(actual_result, expected_result)
+
 
 if __name__ == "__main__":
     unittest.main()
