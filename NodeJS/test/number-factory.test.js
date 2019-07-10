@@ -5,24 +5,25 @@ describe("Number Factory tests", () => {
 
     const float = 3.5,
         intA = 12,
-        intB = 10;
+        intB = 10,
+        numberFactory = new NF();
 
     describe("addition tests", () => {
 
-        test("Test add return", () => {
+        test("Test addition return", () => {
 
-            const actual = NF.addition(intA, intB),
+            const actual = numberFactory.addition(intA, intB),
                 expected = 22;
 
             expect(actual).toBe(expected);
 
         });
 
-        test("Test add arguments", () => {
+        test("Test addition arguments", () => {
 
             expect(() => {
 
-                NF.addition(intA, float);
+                numberFactory.addition(intA, float);
 
             }).toThrow(ArgumentError);
 
