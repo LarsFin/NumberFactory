@@ -8,6 +8,7 @@ INT_A = 6
 INT_B = 10
 FLOAT = 2.8
 INTEGERS = [5, 8, 11, 14, 22]
+MIX_ARR = [4, 7, 9, 20.4, 85]
 
 
 class NumberFactoryTest(unittest.TestCase):
@@ -75,6 +76,10 @@ class NumberFactoryTest(unittest.TestCase):
         fail_message = "Expected {expected}, got {actual}.".format(
             expected=expected_result, actual=actual_result)
         self.assertEqual(actual_result, expected_result, fail_message)
+
+    def test_sum_argument(self):
+        self.assertRaises(ArgumentException, self.number_factory.sum,
+                          MIX_ARR)
 
 
 if __name__ == "__main__":
