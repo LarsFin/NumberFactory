@@ -157,3 +157,19 @@ describe("sum tests", () => {
     });
 
 });
+
+describe("random tests", () => {
+
+    const mockRandomCall = jest.fn(),
+        diNumberFactory = new NF(mockRandomCall);
+
+    test("Test Math.random() called", () => {
+
+        const expected = 2;
+
+        diNumberFactory.random();
+        expect(mockRandomCall.mock.calls.length).toHaveLength(expected);
+
+    });
+
+});
