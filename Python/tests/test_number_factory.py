@@ -56,6 +56,13 @@ class NumberFactoryTest(unittest.TestCase):
         self.assertRaises(ArgumentException, self.number_factory.divide,
                           4, 2.2)
 
+    def test_square(self):
+        expected_result = 36
+        actual_result = self.number_factory.square(INT_A)
+        fail_message = "Expected {expected}, got {actual}.".format(
+            expected=expected_result, actual=actual_result)
+        self.assertEqual(actual_result, expected_result, fail_message)
+
 
 if __name__ == "__main__":
     unittest.main()
