@@ -4,7 +4,9 @@ class NumberFactory {
 
     private Random generator;
 
-    NumberFactory() { }
+    NumberFactory() {
+        generator = new Random();
+    }
 
     NumberFactory(Random random) {
         generator = random;

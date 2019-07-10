@@ -10,7 +10,7 @@ The table below shows the languages currently used.
 |:-:|:-:|:-:|:-:|
 |C#|xUnit|Moq<br>Shouldly|NO|
 |go|||NO|
-|Java|Junit|Mockito<br>gradle|NO|
+|Java|Junit|Mockito<br>gradle|YES|
 |node.JS|Jasmine|npm|NO|
 |PHP|||NO|
 |Python|unittest||NO|

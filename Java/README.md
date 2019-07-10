@@ -51,7 +51,7 @@ So I can sum multiple integers,
 I can pass an array of integers which is summed and the int result is returned
 ```
 
-random [ ]
+random [✓]
 
 ```
 As a User,
