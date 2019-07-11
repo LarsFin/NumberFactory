@@ -16,9 +16,9 @@ NodeJS/node_modules
 NodeJS/package-lock.json
 
 # PHP ignores
-PHP/vendor
 PHP/composer.lock
 PHP/composer.phar
+PHP/vendor
 
 # Python ignores
 Python/*/*.pyc
