@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+include './src/ArgumentException.php';
+
 final class NumberFactory
 {
 
@@ -39,6 +41,9 @@ final class NumberFactory
         $sum = 0;
 
         foreach($arr as &$num) {
+            if (gettype($num) != integer::class && gettype($num) != int::class) {
+                throw new ArgumentException("Non int type within array");
+            }
             $sum += $num;
         }
 
