@@ -45,5 +45,14 @@ final class NumberFactoryTest extends TestCase
             NumberFactory::divide($this->INT_A,$this->INT_B)
         );
     }
+
+    public function testSquareReturn(): void
+    {
+        $expected = 9;
+        $this->assertSame(
+            $expected,
+            NumberFactory::square($this->INT_A)
+        );
+    }
 }
 ?>
