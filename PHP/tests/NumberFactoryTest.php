@@ -87,5 +87,18 @@ final class NumberFactoryTest extends TestCase
 
         NumberFactory::random($randomGenerator);
     }
+
+    public function testRandomReturn(): void
+    {
+        $expected = 50;
+        $forcedRandomGenerator = $this->createMock(RandomGenerator::class);
+        $forcedRandomGenerator->method('rand')
+                              ->willReturn($expected);
+
+        $this->assertSame(
+            $expected,
+            NumberFactory::random($forcedRandomGenerator)
+        );
+    }
 }
 ?>
