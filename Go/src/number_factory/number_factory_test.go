@@ -21,3 +21,10 @@ func TestSubtract(t *testing.T) {
 
   assert.Equal(t, expected, actual, "Should be equal")
 }
+
+func TestMultiply(t *testing.T) {
+	actual := n.Multiply()
+  expected := 48
+
+  assert.Equal(t, expected, actual, "Should be equal")
+}
