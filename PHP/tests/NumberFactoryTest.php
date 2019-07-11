@@ -27,5 +27,14 @@ final class NumberFactoryTest extends TestCase
             NumberFactory::subtract($this->INT_A, $this->INT_B)
         );
     }
+
+    public function testMultiplyReturn(): void
+    {
+        $expected = 30;
+        $this->assertSame(
+            $expected,
+            NumberFactory::multiply($this->INT_A, $this->INT_B)
+        );
+    }
 }
 ?>
