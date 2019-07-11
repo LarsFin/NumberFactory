@@ -15,6 +15,11 @@ NodeJS/coverage
 NodeJS/node_modules
 NodeJS/package-lock.json
 
+# PHP ignores
+PHP/vendor
+PHP/composer.lock
+PHP/composer.phar
+
 # Python ignores
 Python/*/*.pyc
 
