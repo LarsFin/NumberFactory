@@ -9,6 +9,7 @@ final class NumberFactoryTest extends TestCase
 {
     private $INT_A = 3;
     private $INT_B = 10;
+    private $INTS = [4, 6, 9, 11];
 
     public function testAddReturn(): void
     {
@@ -52,6 +53,15 @@ final class NumberFactoryTest extends TestCase
         $this->assertSame(
             $expected,
             NumberFactory::square($this->INT_A)
+        );
+    }
+
+    public function testSumReturn(): void
+    {
+        $expected = 30;
+        $this->assertSame(
+            $expected,
+            NumberFactory::sum($this->INTS)
         );
     }
 }
