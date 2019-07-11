@@ -71,5 +71,21 @@ final class NumberFactoryTest extends TestCase
         $this->expectException(ArgumentException::class);
         NumberFactory::sum($this->MIX);
     }
+
+    public function testGeneratorRandCalled(): void
+    {
+        $randomGenerator = $this->getMockBuilder(RandomGenerator::class)
+                                ->setMethods(['rand'])
+                                ->getMock();
+
+        $randomGenerator->expects($this->once())
+                        ->method('rand')
+                        ->with(
+                            $this->equalTo(0),
+                            $this->equalTo(100)
+                        );
+
+        NumberFactory::random($randomGenerator);
+    }
 }
 ?>

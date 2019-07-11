@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 include './src/ArgumentException.php';
+include './src/RandomGenerator.php';
 
 final class NumberFactory
 {
