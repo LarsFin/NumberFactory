@@ -14,3 +14,10 @@ func TestAdd(t *testing.T) {
 
   assert.Equal(t, expected, actual, "Should be equal")
 }
+
+func TestSubtract(t *testing.T) {
+	actual := n.Subtract()
+  expected := 2
+
+  assert.Equal(t, expected, actual, "Should be equal")
+}

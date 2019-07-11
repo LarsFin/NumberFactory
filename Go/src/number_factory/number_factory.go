@@ -8,3 +8,7 @@ type NumberFactory struct {
 func (n NumberFactory) Add() int {
     return n.a + n.b
 }
+
+func (n NumberFactory) Subtract() int {
+    return 0
+}
