@@ -10,5 +10,11 @@ final class NumberFactory
 
     }
 
+    public static function subtract(int $a, int $b) {
+
+        return $a - $b;
+
+    }
+
 }
 ?>
