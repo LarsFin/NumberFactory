@@ -13,10 +13,18 @@ final class NumberFactoryTest extends TestCase
     public function testAddReturn(): void
     {
         $expected = 13;
-        $numberFactory = new NumberFactory();
         $this->assertSame(
             $expected,
-            $numberFactory->add($this->INT_A, $this->INT_B)
+            NumberFactory::add($this->INT_A, $this->INT_B)
+        );
+    }
+
+    public function testSubtractReturn(): void
+    {
+        $expected = -7;
+        $this->assertSame(
+            $expected,
+            NumberFactory::subtract($this->INT_A, $this->INT_B)
         );
     }
 }

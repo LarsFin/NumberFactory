@@ -4,7 +4,7 @@ declare(strict_types=1);
 final class NumberFactory
 {
 
-    public function add(int $a, int $b) {
+    public static function add(int $a, int $b) {
 
         return $a + $b;
 
