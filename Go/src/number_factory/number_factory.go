@@ -18,5 +18,5 @@ func (n NumberFactory) Multiply() int {
 }
 
 func (n NumberFactory) Divide() float64 {
-    return 0
+    return float64(n.a) / float64(n.b)
 }
