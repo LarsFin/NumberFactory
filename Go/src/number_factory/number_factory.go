@@ -6,5 +6,5 @@ type NumberFactory struct {
 }
 
 func (n *NumberFactory) Add() int {
-    return 0
+    return n.a + n.b
 }
