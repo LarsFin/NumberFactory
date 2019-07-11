@@ -42,7 +42,7 @@ final class NumberFactoryTest extends TestCase
         $expected = 0.3;
         $this->assertSame(
             $expected,
-            NumberFactory::divide($this->INT_A,$this->$INT_B)
+            NumberFactory::divide($this->INT_A,$this->INT_B)
         );
     }
 }

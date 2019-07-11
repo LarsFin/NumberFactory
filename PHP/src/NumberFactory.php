@@ -22,5 +22,11 @@ final class NumberFactory
 
     }
 
+    public static function divide(int $a, int $b) {
+
+        return $a / $b;
+
+    }
+
 }
 ?>
