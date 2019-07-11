@@ -28,5 +28,11 @@ final class NumberFactory
 
     }
 
+    public static function square(int $a) {
+
+        return $a ** 2;
+
+    }
+
 }
 ?>
