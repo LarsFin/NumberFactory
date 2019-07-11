@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+include './src/ArgumentException.php';
 include './src/NumberFactory.php';
 
 use PHPUnit\Framework\TestCase;
@@ -10,6 +11,7 @@ final class NumberFactoryTest extends TestCase
     private $INT_A = 3;
     private $INT_B = 10;
     private $INTS = [4, 6, 9, 11];
+    private $MIX = [5, "5", 2.3];
 
     public function testAddReturn(): void
     {
@@ -63,6 +65,12 @@ final class NumberFactoryTest extends TestCase
             $expected,
             NumberFactory::sum($this->INTS)
         );
+    }
+
+    public function testSumArgument(): void
+    {
+        $this->expectException(ArgumentException::class);
+        NumberFactory::sum($this->MIX);
     }
 }
 ?>
