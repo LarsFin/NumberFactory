@@ -34,5 +34,17 @@ final class NumberFactory
 
     }
 
+    public static function sum(array $arr) {
+
+        $sum = 0;
+
+        foreach($arr as &$num) {
+            $sum += $num;
+        }
+
+        return $sum;
+
+    }
+
 }
 ?>
