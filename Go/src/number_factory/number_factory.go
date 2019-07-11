@@ -16,3 +16,7 @@ func (n NumberFactory) Subtract() int {
 func (n NumberFactory) Multiply() int {
     return n.a * n.b
 }
+
+func (n NumberFactory) Divide() float64 {
+    return 0
+}

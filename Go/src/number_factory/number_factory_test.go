@@ -28,3 +28,10 @@ func TestMultiply(t *testing.T) {
 
   assert.Equal(t, expected, actual, "Should be equal")
 }
+
+func TestDivide(t *testing.T) {
+	actual := n.Divide()
+  expected := 1.3333333333333333
+
+  assert.Equal(t, expected, actual, "Should be equal")
+}
