@@ -3,6 +3,10 @@ CS/.vs
 CS/*/bin
 CS/*/obj
 
+# Go ignores
+Go/pkg/*
+Go/src/github.com
+
 # Java ignores
 Java/.gradle
 Java/.idea
