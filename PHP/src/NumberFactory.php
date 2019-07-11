@@ -16,5 +16,11 @@ final class NumberFactory
 
     }
 
+    public static function multiply(int $a, int $b) {
+
+        return $a * $b;
+
+    }
+
 }
 ?>

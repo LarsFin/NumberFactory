@@ -19,7 +19,7 @@ So I can determine difficult subtraction,
 I can pass two arguments which are subtracted and int result is returned
 ```
 
-multiply [ ]
+multiply [✓]
 
 ```
 As a User,
