@@ -14,5 +14,5 @@ func (n NumberFactory) Subtract() int {
 }
 
 func (n NumberFactory) Multiply() int {
-    return 0
+    return n.a * n.b
 }
