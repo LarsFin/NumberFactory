@@ -12,7 +12,7 @@ The table below shows the languages currently used.
 |go|||NO|
 |Java|Junit|Mockito<br>gradle|NO|
 |node.JS|Jasmine|npm|NO|
-|PHP|PHPUnit|composer|NO|
+|PHP|PHPUnit|composer|YES|
 |Python|unittest||NO|
 |Ruby|rspec|rubocop|NO|
 
