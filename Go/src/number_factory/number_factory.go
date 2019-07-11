@@ -10,5 +10,5 @@ func (n NumberFactory) Add() int {
 }
 
 func (n NumberFactory) Subtract() int {
-    return 0
+    return n.a - n.b
 }
