@@ -54,7 +54,7 @@ final class NumberFactory
 
     public static function random(RandomGenerator $gen) {
 
-        $gen->rand(0, 100);
+        return $gen->rand(0, 100);
 
     }
 
