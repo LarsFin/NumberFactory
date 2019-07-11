@@ -5,6 +5,6 @@ type NumberFactory struct {
     a, b int
 }
 
-func (n *NumberFactory) Add() int {
+func (n NumberFactory) Add() int {
     return n.a + n.b
 }
