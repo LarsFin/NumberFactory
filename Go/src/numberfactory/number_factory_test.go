@@ -10,7 +10,7 @@ import (
 
 const a, b = 8, 6
 var arr = []int{ 3, 5, 7, 9, 11 }
-var n NumberAssessor = NumberFactory{a, b, arr}
+var n NumberAssessor = NumberFactory{A: a, B: b, C: arr}
 
 func TestAdd(t *testing.T) {
 	actual := n.Add()
@@ -65,5 +65,6 @@ func TestRandCalled(t *testing.T) {
     RandomGenerate(101).
     Return(0)
 
-  n.Random(mock)
+  n = NumberFactory{G: mock}
+  n.Random()
 }

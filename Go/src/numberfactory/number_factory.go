@@ -16,7 +16,7 @@ type NumberAssessor interface {
     Divide() float64
     Square() int
     Sum() int
-    Random(randomgenerator.RandomGenerator) int
+    Random() int
 }
 
 /*
@@ -28,6 +28,7 @@ C ([]int): A slice of ints which are used to determine total value through sum()
 type NumberFactory struct {
     A, B int
     C []int
+    G randomgenerator.RandomGenerator
 }
 
 /*
@@ -92,6 +93,6 @@ func (n NumberFactory) Sum() int {
 Random func
 :TODO
 */
-func (n NumberFactory) Random(g randomgenerator.RandomGenerator) int {
-    return 0;
+func (n NumberFactory) Random() int {
+    return 0
 }
