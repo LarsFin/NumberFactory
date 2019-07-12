@@ -3,7 +3,7 @@
 User Stories are below to be completed in Java.
 
 
-add [ ]
+add [✓]
 
 ```
 As a User,
@@ -11,7 +11,7 @@ So I can determine difficult addition,
 I can pass two arguments which are added and int result is returned
 ```
 
-subtract [ ]
+subtract [✓]
 
 ```
 As a User,
@@ -19,7 +19,7 @@ So I can determine difficult subtraction,
 I can pass two arguments which are subtracted and int result is returned
 ```
 
-multiply [ ]
+multiply [✓]
 
 ```
 As a User,
@@ -27,7 +27,7 @@ So I can determine difficult multiplication,
 I can pass two arguments which are multiplied and int result is returned
 ```
 
-divide [ ]
+divide [✓]
 
 ```
 As a User,
@@ -35,7 +35,7 @@ So I can determine difficult division,
 I can pass two arguments which are divided and float result is returned
 ```
 
-square [ ]
+square [✓]
 
 ```
 As a User,
@@ -43,7 +43,7 @@ So I can determine difficult squares,
 I can pass an int argument which is squared and the int result is returned
 ```
 
-sum [ ]
+sum [✓]
 
 ```
 As a User,
@@ -51,7 +51,7 @@ So I can sum multiple integers,
 I can pass an array of integers which is summed and the int result is returned
 ```
 
-random [ ]
+random [✓]
 
 ```
 As a User,

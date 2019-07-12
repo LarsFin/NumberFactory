@@ -8,9 +8,9 @@ The table below shows the languages currently used.
 
 |Language|Tested With|Additional Tools|Complete?|
 |:-:|:-:|:-:|:-:|
-|C#|xUnit|Moq<br>Shouldly|NO|
+|C#|xUnit|Moq<br>Shouldly|YES|
 |go|testing|stretchr/testify/assert<br>golint<br>gomock|YES|
-|Java|Junit|Mockito<br>gradle|NO|
+|Java|Junit|Mockito<br>gradle|YES|
 |node.JS|Jest|npm<br>eslint|YES|
 |PHP|PHPUnit|composer|YES|
 |Python|unittest|pycodestyle<br>pyrg<br>mock|YES|
