@@ -8,12 +8,12 @@ The table below shows the languages currently used.
 
 |Language|Tested With|Additional Tools|Complete?|
 |:-:|:-:|:-:|:-:|
-|C#|xUnit|Moq<br>Shouldly|YES|
-|go|||NO|
+|C#|xUnit|Moq<br>Shouldly|NO|
+|go|testing|stretchr/testify/assert<br>golint<br>gomock|YES|
 |Java|Junit|Mockito<br>gradle|NO|
-|node.JS|Jasmine|npm|NO|
+|node.JS|Jest|npm<br>eslint|YES|
 |PHP|||NO|
-|Python|unittest||NO|
+|Python|unittest|pycodestyle<br>pyrg<br>mock|YES|
 |Ruby|rspec|rubocop|NO|
 
 ## User Stories of Factory
