@@ -14,7 +14,7 @@ The table below shows the languages currently used.
 |node.JS|Jest|npm<br>eslint|YES|
 |PHP|PHPUnit|composer|YES|
 |Python|unittest|pycodestyle<br>pyrg<br>mock|YES|
-|Ruby|rspec|rubocop|NO|
+|Ruby|rspec|rubocop<br>simplecov|YES|
 
 ## User Stories of Factory
 
