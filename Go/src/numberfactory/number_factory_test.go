@@ -62,7 +62,7 @@ func TestRandCalled(t *testing.T) {
 
   mock.
     EXPECT().
-    RandomGenerate(101).
+    RandomGenerate(gomock.Eq(101)).
     Return(0)
 
   n = NumberFactory{G: mock}
