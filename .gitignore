@@ -19,6 +19,8 @@ Java/out
 # NodeJS ignores
 NodeJS/coverage
 NodeJS/node_modules
+NodeJS/*.log
+NodeJS/package-lock.json
 NodeJS/package-lock.json
 
 # PHP ignores
