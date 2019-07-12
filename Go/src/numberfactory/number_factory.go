@@ -13,6 +13,20 @@ type NumberFactory struct {
 }
 
 /*
+NumberAssessor interface
+Contains the signatures of functions which should be implemented within any
+NumberAssessor typed variale
+*/
+type NumberAssessor interface {
+    Add() int
+    Subtract() int
+    Multiply() int
+    Divide() float64
+    Square() int
+    Sum() int
+}
+
+/*
 Add func
 n (NumberFactory): Function receiver
 return (int): value of combined members 'A' and 'B' of n

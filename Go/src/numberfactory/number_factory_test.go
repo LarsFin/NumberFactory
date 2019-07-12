@@ -7,7 +7,7 @@ import (
 
 const a, b = 8, 6
 var arr = []int{ 3, 5, 7, 9, 11 }
-var n = NumberFactory{a, b, arr}
+var n NumberAssessor = NumberFactory{a, b, arr}
 
 func TestAdd(t *testing.T) {
 	actual := n.Add()
