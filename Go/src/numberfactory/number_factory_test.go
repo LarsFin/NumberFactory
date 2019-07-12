@@ -2,6 +2,9 @@ package numberfactory
 
 import (
 	"testing"
+  "randomgenerator"
+
+  "github.com/golang/mock/gomock"
   "github.com/stretchr/testify/assert"
 )
 
@@ -49,4 +52,18 @@ func TestSum(t *testing.T) {
   expected := 35
 
   assert.Equal(t, expected, actual, "Should be equal")
+}
+
+func TestRandCalled(t *testing.T) {
+  ctrl := gomock.NewController(t)
+  defer ctrl.Finish()
+
+  mock := randomgenerator.NewMockRandomGenerator(ctrl)
+
+  mock.
+    EXPECT().
+    RandomGenerate(101).
+    Return(0)
+
+  n.Random(mock)
 }

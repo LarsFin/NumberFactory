@@ -1,5 +1,23 @@
 package numberfactory
 
+import (
+  "randomgenerator"
+)
+
+/*
+NumberAssessor interface
+Contains the signatures of functions which should be implemented within any
+NumberAssessor typed variable
+*/
+type NumberAssessor interface {
+    Add() int
+    Subtract() int
+    Multiply() int
+    Divide() float64
+    Square() int
+    Sum() int
+    Random(randomgenerator.RandomGenerator) int
+}
 
 /*
 NumberFactory struct
@@ -10,20 +28,6 @@ C ([]int): A slice of ints which are used to determine total value through sum()
 type NumberFactory struct {
     A, B int
     C []int
-}
-
-/*
-NumberAssessor interface
-Contains the signatures of functions which should be implemented within any
-NumberAssessor typed variale
-*/
-type NumberAssessor interface {
-    Add() int
-    Subtract() int
-    Multiply() int
-    Divide() float64
-    Square() int
-    Sum() int
 }
 
 /*
@@ -56,7 +60,7 @@ func (n NumberFactory) Multiply() int {
 /*
 Divide func
 n (NumberFactory): Function receiver
-return (int): value of 'A' divided by 'B', 'A' and 'B' are members of n
+return (float64): value of 'A' divided by 'B', 'A' and 'B' are members of n
 */
 func (n NumberFactory) Divide() float64 {
     return float64(n.A) / float64(n.B)
@@ -82,4 +86,12 @@ func (n NumberFactory) Sum() int {
         sum += n.C[i]
     }
     return sum
+}
+
+/*
+Random func
+:TODO
+*/
+func (n NumberFactory) Random(g randomgenerator.RandomGenerator) int {
+    return 0;
 }

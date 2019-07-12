@@ -4,6 +4,7 @@ CS/*/bin
 CS/*/obj
 
 # Go ignores
+Go/bin
 Go/pkg/*
 Go/src/github.com
 Go/src/golang.org
