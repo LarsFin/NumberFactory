@@ -46,7 +46,7 @@ func TestSquare(t *testing.T) {
 
 func TestSum(t *testing.T) {
   actual := n.Sum()
-  expected := 25
+  expected := 35
 
   assert.Equal(t, expected, actual, "Should be equal")
 }

@@ -27,5 +27,9 @@ func (n NumberFactory) Square() int {
 }
 
 func (n NumberFactory) Sum() int {
-    return 0
+    sum := 0
+    for i := 0; i < len(n.c); i++ {
+        sum += n.c[i]
+    }
+    return sum
 }
