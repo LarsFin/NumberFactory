@@ -22,5 +22,5 @@ func (n NumberFactory) Divide() float64 {
 }
 
 func (n NumberFactory) Square() int {
-    return 0
+    return n.a * n.a
 }
