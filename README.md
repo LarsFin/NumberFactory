@@ -13,7 +13,7 @@ The table below shows the languages currently used.
 |Java|Junit|Mockito<br>gradle|NO|
 |node.JS|Jasmine|npm|NO|
 |PHP|||NO|
-|Python|unittest||NO|
+|Python|unittest|pycodestyle<br>pyrg<br>mock|YES|
 |Ruby|rspec|rubocop|NO|
 
 ## User Stories of Factory
