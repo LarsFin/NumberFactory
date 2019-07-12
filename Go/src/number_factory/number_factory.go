@@ -2,34 +2,34 @@ package number_factory
 
 
 type NumberFactory struct {
-    a, b int
-    c []int
+    A, B int
+    C []int
 }
 
 func (n NumberFactory) Add() int {
-    return n.a + n.b
+    return n.A + n.B
 }
 
 func (n NumberFactory) Subtract() int {
-    return n.a - n.b
+    return n.A - n.B
 }
 
 func (n NumberFactory) Multiply() int {
-    return n.a * n.b
+    return n.A * n.B
 }
 
 func (n NumberFactory) Divide() float64 {
-    return float64(n.a) / float64(n.b)
+    return float64(n.A) / float64(n.B)
 }
 
 func (n NumberFactory) Square() int {
-    return n.a * n.a
+    return n.A * n.A
 }
 
 func (n NumberFactory) Sum() int {
     sum := 0
-    for i := 0; i < len(n.c); i++ {
-        sum += n.c[i]
+    for i := 0; i < len(n.C); i++ {
+        sum += n.C[i]
     }
     return sum
 }
