@@ -3,6 +3,7 @@ package number_factory
 
 type NumberFactory struct {
     a, b int
+    c []int
 }
 
 func (n NumberFactory) Add() int {
@@ -23,4 +24,8 @@ func (n NumberFactory) Divide() float64 {
 
 func (n NumberFactory) Square() int {
     return n.a * n.a
+}
+
+func (n NumberFactory) Sum() int {
+    return 0
 }

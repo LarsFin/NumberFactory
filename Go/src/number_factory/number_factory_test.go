@@ -6,7 +6,8 @@ import (
 )
 
 const a, b int = 8, 6
-var n NumberFactory = NumberFactory{a, b}
+var arr = []int{ 3, 5, 7, 9, 11 }
+var n NumberFactory = NumberFactory{a, b, arr}
 
 func TestAdd(t *testing.T) {
 	actual := n.Add()
@@ -39,6 +40,13 @@ func TestDivide(t *testing.T) {
 func TestSquare(t *testing.T) {
   actual := n.Square()
   expected := 64
+
+  assert.Equal(t, expected, actual, "Should be equal")
+}
+
+func TestSum(t *testing.T) {
+  actual := n.Sum()
+  expected := 25
 
   assert.Equal(t, expected, actual, "Should be equal")
 }
