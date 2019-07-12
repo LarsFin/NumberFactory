@@ -12,7 +12,7 @@ The table below shows the languages currently used.
 |go|testing|stretchr/testify/assert<br>golint<br>gomock|YES|
 |Java|Junit|Mockito<br>gradle|NO|
 |node.JS|Jest|npm<br>eslint|YES|
-|PHP|||NO|
+|PHP|PHPUnit|composer|YES|
 |Python|unittest|pycodestyle<br>pyrg<br>mock|YES|
 |Ruby|rspec|rubocop|NO|
 
