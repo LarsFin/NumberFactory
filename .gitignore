@@ -6,6 +6,7 @@ CS/*/obj
 # Go ignores
 Go/pkg/*
 Go/src/github.com
+Go/src/golang.org
 
 # Java ignores
 Java/.gradle
