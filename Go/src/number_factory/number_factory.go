@@ -20,3 +20,7 @@ func (n NumberFactory) Multiply() int {
 func (n NumberFactory) Divide() float64 {
     return float64(n.a) / float64(n.b)
 }
+
+func (n NumberFactory) Square() int {
+    return 0
+}

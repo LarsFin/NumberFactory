@@ -35,3 +35,10 @@ func TestDivide(t *testing.T) {
 
   assert.Equal(t, expected, actual, "Should be equal")
 }
+
+func TestSquare(t *testing.T) {
+  actual := n.Square()
+  expected := 64
+
+  assert.Equal(t, expected, actual, "Should be equal")
+}
