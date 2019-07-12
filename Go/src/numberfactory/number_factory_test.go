@@ -54,7 +54,7 @@ func TestSum(t *testing.T) {
   assert.Equal(t, expected, actual, "Should be equal")
 }
 
-func TestRandCalled(t *testing.T) {
+func TestRandomGenerateCalled(t *testing.T) {
   ctrl := gomock.NewController(t)
   defer ctrl.Finish()
 
@@ -67,4 +67,22 @@ func TestRandCalled(t *testing.T) {
 
   n = NumberFactory{G: mock}
   n.Random()
+}
+
+func TestRandomReturn(t *testing.T) {
+  expected := 50
+  ctrl := gomock.NewController(t)
+  defer ctrl.Finish()
+
+  mock := randomgenerator.NewMockRandomGenerator(ctrl)
+
+  mock.
+    EXPECT().
+    RandomGenerate(gomock.Eq(101)).
+    Return(expected)
+
+  n = NumberFactory{G: mock}
+  actual := n.Random()
+
+  assert.Equal(t, expected, actual, "Should be equal")
 }
