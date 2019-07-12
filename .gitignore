@@ -3,6 +3,12 @@ CS/.vs
 CS/*/bin
 CS/*/obj
 
+# Go ignores
+Go/bin
+Go/pkg/*
+Go/src/github.com
+Go/src/golang.org
+
 # Java ignores
 Java/.gradle
 Java/.idea
@@ -13,6 +19,8 @@ Java/out
 # NodeJS ignores
 NodeJS/coverage
 NodeJS/node_modules
+NodeJS/*.log
+NodeJS/package-lock.json
 NodeJS/package-lock.json
 
 # PHP ignores
