@@ -3,6 +3,9 @@ CS/.vs
 CS/*/bin
 CS/*/obj
 
+# C++ ignores
+C++/bin
+
 # Go ignores
 Go/bin
 Go/pkg/*

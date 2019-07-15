@@ -10,7 +10,7 @@ The table below shows the languages currently used.
 |:-:|:-:|:-:|:-:|
 |C|||NO|
 |C#|xUnit|Moq<br>Shouldly|YES|
-|C++|Catch2|CMake|NO|
+|C++|Catch2|CMake<br>g++|NO|
 |Elixir|||NO|
 |go|testing|stretchr/testify/assert<br>golint<br>gomock|YES|
 |Java|Junit|Mockito<br>gradle|YES|
