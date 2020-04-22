@@ -100,6 +100,8 @@ describe("divide tests", () => {
 
     const result: number = numberFactory.divide(n1, n2);
 
+    expect(result).toBe(expected);
+
   });
 
   test("throws ArgumentError when passed non integers", () => {

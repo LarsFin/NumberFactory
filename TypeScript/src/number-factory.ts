@@ -20,19 +20,19 @@ export class NumberFactory {
     return a * b;
   }
 
-  divide(a: number, b: number) {
+  divide(a: number, b: number): number {
     this.validateIntegers(a, b);
 
     return a / b;
   }
 
-  square(n: number) {
+  square(n: number): number {
     this.validateIntegers(n);
 
     return n ** 2;
   }
 
-  private validateIntegers(...args: number[]) {
+  private validateIntegers(...args: number[]): void {
     for (const arg of args)
       if (arg % 1 != 0)
         throw new ArgumentError("Arguments must be integers");
