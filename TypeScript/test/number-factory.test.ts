@@ -171,11 +171,11 @@ describe("random tests", () => {
 
   test("calls random generator and returns floored value", () => {
 
-    const randomStub = 4.5;
+    const randomStub = 0.5;
     const mockRandom = {
       generate: jest.fn(() => randomStub)
     };
-    const expected = 4;
+    const expected = 50;
 
     numberFactory = new NumberFactory(mockRandom);
 

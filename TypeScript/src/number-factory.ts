@@ -1,6 +1,14 @@
 import { ArgumentError } from "./argument-error";
+import { IRandom } from "./random";
+import { Random } from "./random";
 
 export class NumberFactory {
+
+  private randomGenerator: IRandom;
+
+  constructor(randomGenerator: IRandom = new Random()) {
+    this.randomGenerator = randomGenerator;
+  }
 
   add(a: number, b: number): number {
     this.validateIntegers(a, b);
@@ -41,6 +49,12 @@ export class NumberFactory {
       sum += n;
 
     return sum;
+  }
+
+  random() {
+    let randomVariant = this.randomGenerator.generate();
+
+    return Math.floor(randomVariant * 101);
   }
 
   private validateIntegers(...args: number[]): void {
