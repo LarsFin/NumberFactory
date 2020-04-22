@@ -9,7 +9,7 @@ beforeEach(() => {
 
 });
 
-describe("addition tests", () => {
+describe("add tests", () => {
 
   test("returns correct value", () => {
 
@@ -58,6 +58,22 @@ describe("subtraction tests", () => {
     expect(() => {
       numberFactory.subtract(n1, n2);
     }).toThrow(ArgumentError);
+
+  });
+
+});
+
+describe("multiply tests", () => {
+
+  test("returns correct value", () => {
+
+    const n1 = 4;
+    const n2 = 4;
+    const expected = 16;
+
+    const result: number = numberFactory.multiply(n1, n2);
+
+    expect(result).toBe(expected);
 
   });
 
