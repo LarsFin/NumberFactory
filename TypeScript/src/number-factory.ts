@@ -3,17 +3,21 @@ import { ArgumentError } from "./argument-error";
 export class NumberFactory {
 
   add(a: number, b: number): number {
-    if (a % 1 != 0 || b % 1 != 0)
-      throw new ArgumentError("Arguments must be integers.");
+    this.validateIntegers(a, b);
 
     return a + b;
   }
 
   subtract(a: number, b: number): number {
-    if (a % 1 != 0 || b % 1 != 0)
-      throw new ArgumentError("Arguments must be integers.");
+    this.validateIntegers(a, b);
 
     return a - b;
+  }
+
+  private validateIntegers(...args: number[]) {
+    for (const arg of args)
+      if (arg % 1 != 0)
+        throw new ArgumentError("Arguments must be integers");
   }
 
 }
