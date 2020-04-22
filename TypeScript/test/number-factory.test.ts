@@ -114,3 +114,18 @@ describe("divide tests", () => {
   });
 
 });
+
+describe("square tests", () => {
+
+  test("returns correct value", () => {
+
+    const n = 8;
+    const expected = 64;
+
+    const result: number = numberFactory.squarre(n);
+
+    expect(result).toBe(expected);
+
+  });
+
+});
