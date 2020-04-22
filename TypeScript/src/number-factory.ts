@@ -33,6 +33,8 @@ export class NumberFactory {
   }
 
   sum(numbers: number[]): number {
+    this.validateIntegers(...numbers);
+
     let sum = 0;
 
     for (const n of numbers)
