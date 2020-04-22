@@ -27,6 +27,8 @@ export class NumberFactory {
   }
 
   square(n: number) {
+    this.validateIntegers(n);
+
     return n ** 2;
   }
 
