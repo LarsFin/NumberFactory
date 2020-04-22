@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "module": "commonjs",
+        "target": "ES5",
+        "outDir": "dist",
+        "rootDir": "src",
+        "lib": ["dom", "es2015"]
+    },
+    "exclude": [
+      "test/**"
+    ]
+}
