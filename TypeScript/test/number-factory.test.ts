@@ -77,4 +77,15 @@ describe("multiply tests", () => {
 
   });
 
+  test("throws ArgumentError when passed non integers", () => {
+
+    const n1 = 10;
+    const n2 = 0.8;
+
+    expect(() => {
+      numberFactory.multiply(n1, n2);
+    }).toThrow(ArgumentError);
+
+  });
+
 });
