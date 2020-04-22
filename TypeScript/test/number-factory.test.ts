@@ -166,3 +166,23 @@ describe("sum tests", () => {
   });
 
 });
+
+describe("random tests", () => {
+
+  test("calls random generator and returns floored value", () => {
+
+    const randomStub = 4.5;
+    const mockRandom = {
+      generate: jest.fn(() => randomStub)
+    };
+    const expected = 4;
+
+    numberFactory = new NumberFactory(mockRandom);
+
+    const result = numberFactory.random();
+
+    expect(result).toBe(expected);
+
+  });
+
+});
