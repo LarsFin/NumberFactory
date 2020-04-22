@@ -32,6 +32,15 @@ export class NumberFactory {
     return n ** 2;
   }
 
+  sum(numbers: number[]): number {
+    let sum = 0;
+
+    for (const n of numbers)
+      sum += n;
+
+    return sum;
+  }
+
   private validateIntegers(...args: number[]): void {
     for (const arg of args)
       if (arg % 1 != 0)
