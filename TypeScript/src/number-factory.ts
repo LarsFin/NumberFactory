@@ -20,6 +20,10 @@ export class NumberFactory {
     return a * b;
   }
 
+  divide(a: number, b: number) {
+    return a / b;
+  }
+
   private validateIntegers(...args: number[]) {
     for (const arg of args)
       if (arg % 1 != 0)
