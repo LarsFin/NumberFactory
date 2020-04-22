@@ -155,4 +155,14 @@ describe("sum tests", () => {
 
   });
 
+  test("throws ArgumentError when passed non integers", () => {
+
+    const numbers = [1, 4, 8, 20, 25.34, 30, 50];
+
+    expect(() => {
+      numberFactory.sum(numbers);
+    }).toThrow(ArgumentError);
+
+  });
+
 });
