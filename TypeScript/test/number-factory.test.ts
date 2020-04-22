@@ -122,7 +122,7 @@ describe("square tests", () => {
     const n = 8;
     const expected = 64;
 
-    const result: number = numberFactory.squarre(n);
+    const result: number = numberFactory.square(n);
 
     expect(result).toBe(expected);
 
