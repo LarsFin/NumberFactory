@@ -89,3 +89,17 @@ describe("multiply tests", () => {
   });
 
 });
+
+describe("divide tests", () => {
+
+  test("returns correct value", () => {
+
+    const n1 = 5;
+    const n2 = 2;
+    const expected = 2.5;
+
+    const result: number = numberFactory.divide(n1, n2);
+
+  });
+
+});
