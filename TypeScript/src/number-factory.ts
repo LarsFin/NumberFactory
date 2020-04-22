@@ -15,6 +15,8 @@ export class NumberFactory {
   }
 
   multiply(a: number, b: number): number {
+    this.validateIntegers(a, b);
+
     return a * b;
   }
 
