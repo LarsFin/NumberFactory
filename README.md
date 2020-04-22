@@ -22,6 +22,7 @@ The table below shows the languages currently used.
 |Ruby|rspec|rubocop<br>simplecov|YES|
 |Rust|||NO|
 |Smalltalk|||NO|
+|TypeScript|Jest|tslint|NO|
 
 ## User Stories of Factory
 

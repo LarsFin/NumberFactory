@@ -2,4 +2,5 @@
 
 int main() {
   printf("Number Factory 🏭\n");
+  return 0;
 }
