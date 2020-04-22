@@ -2,11 +2,11 @@
 A bit overkill. But wanted to try out TypeScript interfaces
 */
 
-export interface IRandom {
+export interface RandomGenerator {
   generate(): number;
 }
 
-export class Random implements IRandom {
+export class Random implements RandomGenerator {
 
   generate(): number {
     return Math.random();

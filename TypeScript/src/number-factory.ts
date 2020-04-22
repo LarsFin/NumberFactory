@@ -1,12 +1,12 @@
 import { ArgumentError } from "./argument-error";
-import { IRandom } from "./random";
+import { RandomGenerator } from "./random";
 import { Random } from "./random";
 
 export class NumberFactory {
 
-  private randomGenerator: IRandom;
+  private randomGenerator: RandomGenerator;
 
-  constructor(randomGenerator: IRandom = new Random()) {
+  constructor(randomGenerator: RandomGenerator = new Random()) {
     this.randomGenerator = randomGenerator;
   }
 
@@ -51,8 +51,8 @@ export class NumberFactory {
     return sum;
   }
 
-  random() {
-    let randomVariant = this.randomGenerator.generate();
+  random(): number {
+    const randomVariant = this.randomGenerator.generate();
 
     return Math.floor(randomVariant * 101);
   }
