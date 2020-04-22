@@ -141,3 +141,18 @@ describe("square tests", () => {
   });
 
 });
+
+describe("sum tests", () => {
+
+  test("returns correct value", () => {
+
+    const numbers = [2, 5, 13];
+    const expected = 20;
+
+    const result: number = numberFactory.sum(numbers);
+
+    expect(result).toBe(expected);
+
+  });
+
+});
