@@ -21,6 +21,8 @@ export class NumberFactory {
   }
 
   divide(a: number, b: number) {
+    this.validateIntegers(a, b);
+
     return a / b;
   }
 
