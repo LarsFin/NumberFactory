@@ -128,4 +128,14 @@ describe("square tests", () => {
 
   });
 
+  test("throws ArgumentError when passed non integers", () => {
+
+    const n = 0.25;
+
+    expect(() => {
+      numberFactory.square(n);
+    }).toThrow(ArgumentError);
+
+  });
+
 });
