@@ -38,3 +38,8 @@ Python/*/*.pyc
 Ruby/coverage
 Ruby/Gemfile.lock
 Ruby/.rspec
+
+# TypeScript
+TypeScript/dist
+TypeScript/node_modules
+TypeScript/package-lock.json

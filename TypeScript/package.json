@@ -1,0 +1,26 @@
+{
+  "name": "numberfactory-typescript",
+  "version": "1.0.0",
+  "description": "Basic calculator development to advance TDD knowledge in TS",
+  "main": "./lib/app.js",
+  "directories": {
+    "dist": "dist",
+    "src": "src",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npx jest"
+  },
+  "author": "LarsFin",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-jest": "^23.8.2",
+    "jest": "^25.4.0",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
+  }
+}
