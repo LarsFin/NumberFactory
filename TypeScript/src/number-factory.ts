@@ -14,6 +14,10 @@ export class NumberFactory {
     return a - b;
   }
 
+  multiply(a: number, b: number): number {
+    return a * b;
+  }
+
   private validateIntegers(...args: number[]) {
     for (const arg of args)
       if (arg % 1 != 0)
