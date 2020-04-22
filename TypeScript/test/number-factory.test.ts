@@ -35,3 +35,19 @@ describe("addition tests", () => {
   });
 
 });
+
+describe("subtraction tests", () => {
+
+  test("returns correct value", () => {
+
+    const n1 = 25;
+    const n2 = 10;
+    const expected = 15;
+
+    const result: number = numberFactory.subtract(n1, n2);
+
+    expect(result).toBe(expected);
+
+  });
+
+});
