@@ -50,4 +50,15 @@ describe("subtraction tests", () => {
 
   });
 
+  test("throws ArgumentError when passed non integers", () => {
+
+    const n1 = 8.8;
+    const n2 = 5;
+
+    expect(() => {
+      numberFactory.subtract(n1, n2);
+    }).toThrow(ArgumentError);
+
+  });
+
 });
