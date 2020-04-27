@@ -13,7 +13,7 @@ The table below shows the languages currently used.
 |C++|Catch2|CMake<br>g++|NO|
 |Elixir|||NO|
 |go|testing|stretchr/testify/assert<br>golint<br>gomock|YES|
-|Groovy|Spock|maven|NO|
+|Groovy|Spock|maven|YES|
 |Java|Junit|Mockito<br>gradle|YES|
 |Lisp|||NO|
 |Node.JS|Jest|npm<br>eslint|YES|

@@ -1,6 +1,6 @@
 class NumberFactory {
 
-    def randomGenerator
+    private def randomGenerator
 
     NumberFactory(randomGenerator = new RandomGenerator()) {
 
