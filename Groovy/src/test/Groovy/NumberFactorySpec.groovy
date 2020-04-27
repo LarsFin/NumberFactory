@@ -75,4 +75,21 @@ class NumberFactorySpec extends Specification {
         then:
             result == 2.4f
     }
+
+    //################//
+    // Square Feature //
+    //################//
+
+    def "Squares a passed integer"() {
+
+        given:
+            numberFactory = new NumberFactory()
+            def n = 4
+
+        when:
+            def square = numberFactory.square(n)
+
+        then:
+            square == 16
+    }
 }
