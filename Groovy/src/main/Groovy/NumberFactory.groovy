@@ -2,7 +2,7 @@ class NumberFactory {
 
     def randomGenerator
 
-    NumberFactory(randomGenerator = new Random()) {
+    NumberFactory(randomGenerator = new RandomGenerator()) {
 
         this.randomGenerator = randomGenerator
     }
@@ -27,5 +27,9 @@ class NumberFactory {
         return sum
     }
 
-    def static random = {  }
+    def random = {
+        double randomNum = randomGenerator.generate() * 101
+        def f = (int)Math.floor(randomNum)
+        return f
+    }
 }

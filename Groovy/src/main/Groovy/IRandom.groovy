@@ -1,4 +1,0 @@
-interface IRandom {
-
-    double generate();
-}

@@ -117,15 +117,27 @@ class NumberFactorySpec extends Specification {
     def "Generates random number from 1 to 100"() {
 
         given:
-            def mockRandomGenerator = Mock(IRandom)
-            mockRandomGenerator.generate() >> 0.4
-            numberFactory = new NumberFactory(mockRandomGenerator)
+            def randomGenerator = Mock(IRandomGenerator)
+            randomGenerator.generate() >> 0.4
+            numberFactory = new NumberFactory(randomGenerator)
 
         when:
             def generated = numberFactory.random()
 
         then:
             generated == 40
-            1 * mockRandomGenerator.generate()
+    }
+
+    def "Calls underlying random generator"() {
+
+        given:
+            def randomGenerator = Mock(IRandomGenerator)
+            numberFactory = new NumberFactory(randomGenerator)
+
+        when:
+            numberFactory.random()
+
+        then:
+            1 * randomGenerator.generate()
     }
 }

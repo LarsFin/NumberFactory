@@ -1,0 +1,4 @@
+interface IRandomGenerator {
+
+    double generate()
+}
