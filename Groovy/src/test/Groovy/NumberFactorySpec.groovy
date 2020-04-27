@@ -52,9 +52,27 @@ class NumberFactorySpec extends Specification {
             def n2 = 8
 
         when:
-            def result = numberFactory.multiply(n1, n2)
+            def product = numberFactory.multiply(n1, n2)
 
         then:
-            result == 40
+            product == 40
+    }
+
+    //################//
+    // Divide Feature //
+    //################//
+
+    def "Divide two passed integers for float return"() {
+
+        given:
+            numberFactory = new NumberFactory()
+            def n1 = 12
+            def n2 = 5
+
+        when:
+            def result = numberFactory.divide(n1, n2)
+
+        then:
+            result == 2.4
     }
 }
