@@ -1,0 +1,1 @@
+System.out.println("Number Factory \uD83C\uDFED");
