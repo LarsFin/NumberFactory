@@ -73,6 +73,6 @@ class NumberFactorySpec extends Specification {
             def result = numberFactory.divide(n1, n2)
 
         then:
-            result == 2.4
+            result == 2.4f
     }
 }
