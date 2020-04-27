@@ -40,4 +40,21 @@ class NumberFactorySpec extends Specification {
             result == 12
     }
 
+    //##################//
+    // Multiply Feature //
+    //##################//
+
+    def "Multiply two passed integers"() {
+
+        given:
+            numberFactory = new NumberFactory()
+            def n1 = 5
+            def n2 = 8
+
+        when:
+            def result = numberFactory.multiply(n1, n2)
+
+        then:
+            result == 40
+    }
 }

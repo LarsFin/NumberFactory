@@ -3,7 +3,7 @@
 User Stories are below to be completed in Groovy.
 
 
-add [ ]
+add [✓]
 
 ```
 As a User,
@@ -11,7 +11,7 @@ So I can determine difficult addition,
 I can pass two arguments which are added and int result is returned
 ```
 
-subtract [ ]
+subtract [✓]
 
 ```
 As a User,
