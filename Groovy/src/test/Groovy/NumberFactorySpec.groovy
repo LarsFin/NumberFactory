@@ -9,6 +9,7 @@ class NumberFactorySpec extends Specification {
     //#############//
 
     def "Adds two passed integers"() {
+
         given:
             numberFactory = new NumberFactory()
             def n1 = 5
@@ -19,6 +20,24 @@ class NumberFactorySpec extends Specification {
 
         then:
             sum == 15
+    }
+
+    //##################//
+    // Subtract Feature //
+    //##################//
+
+    def "Subtracts two passed integers"() {
+
+        given:
+            numberFactory = new NumberFactory()
+            def n1 = 20
+            def n2 = 8
+
+        when:
+            def result = numberFactory.subtract(n1, n2)
+
+        then:
+            result == 12
     }
 
 }
