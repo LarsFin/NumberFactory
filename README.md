@@ -22,7 +22,7 @@ The table below shows the languages currently used.
 |Ruby|rspec|rubocop<br>simplecov|YES|
 |Rust|||NO|
 |Smalltalk|||NO|
-|TypeScript|ts-jest|eslint (typescript plugin)|YES|
+|TypeScript|ts-jest|npm<br>eslint (typescript plugin)|YES|
 
 ## User Stories of Factory
 
