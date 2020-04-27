@@ -21,4 +21,17 @@ class NumberFactorySpec extends Specification {
             sum == 15
     }
 
+    def "Throws IllegalArgumentException when passed arguments are not integers"() {
+        given:
+            numberFactory = new NumberFactory()
+            def n1 = 5
+            def n2 = 4.54
+
+        when:
+            numberFactory.add(n1, n2)
+
+        then:
+            thrown(IllegalArgumentException)
+    }
+
 }
