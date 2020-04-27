@@ -1,7 +1,7 @@
 class NumberFactory {
 
-    def add(a, b) {
-
+    def static add(a, b) {
+        return a + b
     }
 
 }
