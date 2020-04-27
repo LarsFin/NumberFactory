@@ -92,4 +92,21 @@ class NumberFactorySpec extends Specification {
         then:
             square == 16
     }
+
+    //#############//
+    // Sum Feature //
+    //#############//
+
+    def "Sums an array of integers"() {
+
+        given:
+            numberFactory = new NumberFactory()
+            def ints = [ 4, 6, 8, 12 ]
+
+        when:
+            def sum = numberFactory.sum(ints)
+
+        then:
+            sum == 20
+    }
 }
