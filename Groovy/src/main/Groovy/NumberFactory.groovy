@@ -1,5 +1,12 @@
 class NumberFactory {
 
+    def randomGenerator
+
+    NumberFactory(randomGenerator = new Random()) {
+
+        this.randomGenerator = randomGenerator
+    }
+
     def static add = { int a, int b -> a + b }
 
     def static subtract = { int a, int b -> a - b }
@@ -19,4 +26,6 @@ class NumberFactory {
 
         return sum
     }
+
+    def static random = {  }
 }

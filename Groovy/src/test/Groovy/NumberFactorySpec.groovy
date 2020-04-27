@@ -109,4 +109,23 @@ class NumberFactorySpec extends Specification {
         then:
             sum == 30
     }
+
+    //################//
+    // Random Feature //
+    //################//
+
+    def "Generates random number from 1 to 100"() {
+
+        given:
+            def mockRandomGenerator = Mock(IRandom)
+            mockRandomGenerator.generate() >> 0.4
+            numberFactory = new NumberFactory(mockRandomGenerator)
+
+        when:
+            def generated = numberFactory.random()
+
+        then:
+            generated == 40
+            1 * mockRandomGenerator.generate()
+    }
 }
