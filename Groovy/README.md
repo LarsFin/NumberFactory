@@ -35,7 +35,7 @@ So I can determine difficult division,
 I can pass two arguments which are divided and float result is returned
 ```
 
-square [ ]
+square [✓]
 
 ```
 As a User,
