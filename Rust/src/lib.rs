@@ -12,7 +12,7 @@ pub mod number_factory {
 
     pub fn mult(_a: i32, _b: i32) -> i32 {
 
-        0
+        _a * _b
     }
 }
 
