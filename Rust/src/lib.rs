@@ -22,7 +22,7 @@ pub mod number_factory {
 
     pub fn sqr(_n: i32) -> i32 {
 
-        0
+        _n * _n
     }
 }
 
