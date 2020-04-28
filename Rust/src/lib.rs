@@ -17,7 +17,7 @@ pub mod number_factory {
 
     pub fn div(_a: i32, _b: i32) -> f64 {
 
-        0.0
+        f64::from(_a) / f64::from(_b)
     }
 }
 
