@@ -14,6 +14,11 @@ pub mod number_factory {
 
         _a * _b
     }
+
+    pub fn div(_a: i32, _b: i32) -> f64 {
+
+        0.0
+    }
 }
 
 // NumberFactory Unit Tests
@@ -44,6 +49,14 @@ mod tests {
 
         let (a, b, _expected) = (5, 7, 35);
         let _result = number_factory::mult(a, b);
+        assert_eq!(_result, _expected);
+    }
+
+    #[test]
+    fn it_divides_two_integers() {
+
+        let (a, b, _expected) = (9, 4, 2.25);
+        let _result = number_factory::div(a, b);
         assert_eq!(_result, _expected);
     }
 }
