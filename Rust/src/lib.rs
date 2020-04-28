@@ -9,6 +9,11 @@ pub mod number_factory {
 
         _a - _b
     }
+
+    pub fn mult(_a: i32, _b: i32) -> i32 {
+
+        0
+    }
 }
 
 // NumberFactory Unit Tests
@@ -31,6 +36,14 @@ mod tests {
 
         let (a, b, _expected) = (10, 2, 8);
         let _result = number_factory::sub(a, b);
+        assert_eq!(_result, _expected);
+    }
+
+    #[test]
+    fn it_multiplies_two_integers() {
+
+        let (a, b, _expected) = (5, 7, 35);
+        let _result = number_factory::mult(a, b);
         assert_eq!(_result, _expected);
     }
 }
