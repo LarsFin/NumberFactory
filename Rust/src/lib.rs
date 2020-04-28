@@ -27,7 +27,14 @@ pub mod number_factory {
 
     pub fn sum(_numbers: &[i32]) -> i32 {
 
-        0
+        let mut sum = 0;
+
+        for _num in _numbers.iter() {
+
+            sum += _num;
+        }
+
+        sum
     }
 }
 
