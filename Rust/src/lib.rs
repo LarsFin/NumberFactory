@@ -19,6 +19,11 @@ pub mod number_factory {
 
         f64::from(_a) / f64::from(_b)
     }
+
+    pub fn sqr(_n: i32) -> i32 {
+
+        0
+    }
 }
 
 // NumberFactory Unit Tests
@@ -57,6 +62,14 @@ mod tests {
 
         let (a, b, _expected) = (9, 4, 2.25);
         let _result = number_factory::div(a, b);
+        assert_eq!(_result, _expected);
+    }
+
+    #[test]
+    fn it_squarres_an_integer() {
+
+        let (n, _expected) = (7, 49);
+        let _result = number_factory::sqr(n);
         assert_eq!(_result, _expected);
     }
 }

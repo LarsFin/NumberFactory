@@ -11,7 +11,7 @@ So I can determine difficult addition,
 I can pass two arguments which are added and int result is returned
 ```
 
-subtract [ ]
+subtract [✓]
 
 ```
 As a User,
@@ -19,7 +19,7 @@ So I can determine difficult subtraction,
 I can pass two arguments which are subtracted and int result is returned
 ```
 
-multiply [ ]
+multiply [✓]
 
 ```
 As a User,
@@ -27,7 +27,7 @@ So I can determine difficult multiplication,
 I can pass two arguments which are multiplied and int result is returned
 ```
 
-divide [ ]
+divide [✓]
 
 ```
 As a User,
