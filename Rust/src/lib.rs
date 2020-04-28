@@ -2,7 +2,7 @@ pub mod number_factory {
 
     pub fn add(_a: i32, _b: i32) -> i32 {
 
-        return 0;
+        return _a + _b;
     }
 }
 
