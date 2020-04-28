@@ -24,6 +24,11 @@ pub mod number_factory {
 
         _n * _n
     }
+
+    pub fn sum(_numbers: &[i32]) -> i32 {
+
+        0
+    }
 }
 
 // NumberFactory Unit Tests
@@ -70,6 +75,15 @@ mod tests {
 
         let (n, _expected) = (7, 49);
         let _result = number_factory::sqr(n);
+        assert_eq!(_result, _expected);
+    }
+
+    #[test]
+    fn it_sums_integers_in_array() {
+
+        let numbers: [i32; 3] = [1, 6, 9];
+        let _expected = 16;
+        let _result = number_factory::sum(&numbers);
         assert_eq!(_result, _expected);
     }
 }
