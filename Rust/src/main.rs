@@ -1,33 +1,34 @@
-extern crate number_factory;
+use number_factory::operations as nf;
+use number_factory::random as r;
 
 fn main() {
 
-    let a = number_factory::operations::rnd(number_factory::random::Random {});
-    let b = number_factory::operations::rnd(number_factory::random::Random {});
+    let a = nf::rnd(r::Random {});
+    let b = nf::rnd(r::Random {});
 
     println!("Number Factory 🏭\n");
-    println!("{} + {} = {}", a, b, number_factory::operations::add(a, b));
+    println!("{} + {} = {}", a, b, nf::add(a, b));
+    println!("{} - {} = {}", a, b, nf::sub(a, b));
+    println!("{} * {} = {}", a, b, nf::mult(a, b));
+    println!("{} / {} = {}", a, b, nf::div(a, b));
+    println!("{} ** 2 = {}", a, nf::sqr(a));
+
+    let mut numbers: [i32; 10] = [0; 10];
+
+    print!("My Numbers: ");
+    let mut tmp;
+
+    for n in numbers.iter_mut() {
+
+        tmp = nf::rnd(r::Random {});
+
+        print!("{} ", tmp);
+
+        *n = tmp;
+    }
+
+    println!();
+
+    println!("Sum of My Numbers: {}", nf::sum(&numbers));
+    println!("🏭  Number Factory shutting down...");
 }
-
-/*
-const intA = numberFactory.random();
-const intB = numberFactory.random();
-const myNumbers: number[] = [];
-
-console.log("Number Factory 🏭\n");
-console.log(`${intA} + ${intB} = ${numberFactory.add(intA, intB)}`);
-console.log(`${intA} - ${intB} = ${numberFactory.subtract(intA, intB)}`);
-console.log(`${intA} * ${intB} = ${numberFactory.multiply(intA, intB)}`);
-console.log(`${intA} / ${intB} = ${numberFactory.divide(intA, intB)}`);
-console.log(`${intA} ** 2 = ${numberFactory.square(intA)}`);
-
-while (myNumbers.length < 10) {
-
-  myNumbers.push(numberFactory.random());
-
-}
-
-console.log(`My Numbers: ${myNumbers.join(', ')}`);
-console.log(`Sum of My Numbers: ${numberFactory.sum(myNumbers)}`);
-console.log("🏭  Number Factory shutting down...");
-*/
