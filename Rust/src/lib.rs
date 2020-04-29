@@ -39,7 +39,7 @@ pub mod number_factory {
 
     pub fn rnd(_rng: impl random::RandomGenerator) -> i32 {
 
-        0
+        _rng.gen(1, 101)
     }
 
     pub mod random {
