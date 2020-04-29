@@ -1,4 +1,6 @@
-pub mod number_factory {
+pub mod operations {
+
+    use crate::random as random;
 
     pub fn add(_a: i32, _b: i32) -> i32 {
 
@@ -41,29 +43,29 @@ pub mod number_factory {
 
         _rng.gen(1, 101)
     }
+}
 
-    pub mod random {
+pub mod random {
 
-        use mockall::*;
-        use mockall::predicate::*;
+    use mockall::*;
+    use mockall::predicate::*;
 
-        use rand::Rng;
+    use rand::Rng;
 
-        #[automock]
-        pub trait RandomGenerator {
+    #[automock]
+    pub trait RandomGenerator {
 
-            fn gen(&self, min: i32, max: i32) -> i32;
-        }
+        fn gen(&self, min: i32, max: i32) -> i32;
+    }
 
-        pub struct Random { }
+    pub struct Random { }
 
-        impl RandomGenerator for Random {
+    impl RandomGenerator for Random {
 
-            fn gen(&self, min: i32, max: i32) -> i32 {
+        fn gen(&self, min: i32, max: i32) -> i32 {
 
-                let mut rng = rand::thread_rng();
-                rng.gen_range(min, max)
-            }
+            let mut rng = rand::thread_rng();
+            rng.gen_range(min, max)
         }
     }
 }
@@ -73,7 +75,8 @@ pub mod number_factory {
 #[cfg(test)]
 mod tests {
 
-    use crate::number_factory as number_factory;
+    use crate::operations as operations;
+    use crate::random as random;
 
     use mockall::predicate::*;
 
@@ -81,7 +84,7 @@ mod tests {
     fn it_adds_two_integers() {
 
         let (a, b, _expected) = (4, 6, 10);
-        let _result = number_factory::add(a, b);
+        let _result = operations::add(a, b);
         assert_eq!(_result, _expected);
     }
 
@@ -89,7 +92,7 @@ mod tests {
     fn it_subtracts_two_integers() {
 
         let (a, b, _expected) = (10, 2, 8);
-        let _result = number_factory::sub(a, b);
+        let _result = operations::sub(a, b);
         assert_eq!(_result, _expected);
     }
 
@@ -97,7 +100,7 @@ mod tests {
     fn it_multiplies_two_integers() {
 
         let (a, b, _expected) = (5, 7, 35);
-        let _result = number_factory::mult(a, b);
+        let _result = operations::mult(a, b);
         assert_eq!(_result, _expected);
     }
 
@@ -105,7 +108,7 @@ mod tests {
     fn it_divides_two_integers() {
 
         let (a, b, _expected) = (9, 4, 2.25);
-        let _result = number_factory::div(a, b);
+        let _result = operations::div(a, b);
         assert_eq!(_result, _expected);
     }
 
@@ -113,7 +116,7 @@ mod tests {
     fn it_squarres_an_integer() {
 
         let (n, _expected) = (7, 49);
-        let _result = number_factory::sqr(n);
+        let _result = operations::sqr(n);
         assert_eq!(_result, _expected);
     }
 
@@ -122,7 +125,7 @@ mod tests {
 
         let numbers: [i32; 3] = [1, 6, 9];
         let _expected = 16;
-        let _result = number_factory::sum(&numbers);
+        let _result = operations::sum(&numbers);
         assert_eq!(_result, _expected);
     }
 
@@ -130,12 +133,12 @@ mod tests {
     fn it_generates_random_number() {
 
         let _expected = 10;
-        let mut mock = number_factory::random::MockRandomGenerator::new();
+        let mut mock = random::MockRandomGenerator::new();
         mock.expect_gen()
             .with(eq(1), eq(101))
             .times(1)
             .returning(move |_mn, _mx| _expected);
 
-        assert_eq!(number_factory::rnd(mock), _expected);
+        assert_eq!(operations::rnd(mock), _expected);
     }
 }
