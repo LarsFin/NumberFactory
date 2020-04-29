@@ -36,6 +36,36 @@ pub mod number_factory {
 
         sum
     }
+
+    pub fn rnd(_rng: impl random::RandomGenerator) -> i32 {
+
+        0
+    }
+
+    pub mod random {
+
+        use mockall::*;
+        use mockall::predicate::*;
+
+        use rand::Rng;
+
+        #[automock]
+        pub trait RandomGenerator {
+
+            fn gen(&self, min: i32, max: i32) -> i32;
+        }
+
+        pub struct Random { }
+
+        impl RandomGenerator for Random {
+
+            fn gen(&self, min: i32, max: i32) -> i32 {
+
+                let mut rng = rand::thread_rng();
+                rng.gen_range(min, max)
+            }
+        }
+    }
 }
 
 // NumberFactory Unit Tests
@@ -44,6 +74,8 @@ pub mod number_factory {
 mod tests {
 
     use crate::number_factory as number_factory;
+
+    use mockall::predicate::*;
 
     #[test]
     fn it_adds_two_integers() {
@@ -92,5 +124,18 @@ mod tests {
         let _expected = 16;
         let _result = number_factory::sum(&numbers);
         assert_eq!(_result, _expected);
+    }
+
+    #[test]
+    fn it_generates_random_number() {
+
+        let _expected = 10;
+        let mut mock = number_factory::random::MockRandomGenerator::new();
+        mock.expect_gen()
+            .with(eq(1), eq(101))
+            .times(1)
+            .returning(move |_mn, _mx| _expected);
+
+        assert_eq!(number_factory::rnd(mock), _expected);
     }
 }
